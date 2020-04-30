@@ -17,7 +17,7 @@ var appBuscarClientes = new Vue({
         eliminarClientes: function (idCliente) {
             var confirmacion = confirm("¿estas seguro de eliminar el registro?..");
             if (confirmacion) {
-                alert(" El registro se elimino corretamente....");
+                alert(" El registro se elimino corretamente");
                 fetch(`private/Modulos/Clientes/procesos.php?proceso=eliminarClientes&clientes=${idCliente}`).then(resp => resp.json()).then(resp => {
                     this.buscarCliente();
                 });
