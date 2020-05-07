@@ -1,60 +1,67 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>miguiavialsv</title>
-   
-    <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/vue-select@3.0.0/dist/vue-select.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
+<form v-on:submit.prevent="guardarUsuario" data-accion="nuevo" data-idusuario='' method="post" id="frm-usuario">
+    <div class="card text-white bg-danger mb-3" style="max-width: 24rem;">
+        <div class="card-header">
+            Registro Usuario
 
-    <body class="bodys">
-        <!----Navegacion-->
-        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand"href="#"><img src="road .png" alt=""></a>
-            <h2 class="text-warning">Mi Guia Vial        El Salvador</h2> 
-            <br>
-    
-    
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                   <img src="multimedia-option.png" alt="">
-                    
-                </li> 
-                  
-                    <li class="nav-item">
-                
-                        <a class="nav-link mostrar-descargas" data-modulo="descargas" data-form="descargas" href="#">DESCARGAS</a>
-                    </li> 
-                    <li class="nav-item">
-                      <img src="kid-and-baby.png" alt="">
-                       
-                   </li> 
-                    <li class="nav-item">              
-                      <a class="nav-link mostrar-juegosniños" data-modulo="juegosniños" data-form="juegosniños" href="#">JUEGOS NIÑOS</a>
-                
-                    </li>
-                    
-                 <li>
-                      <button style="margin: 10px" type="button" class="btn btn-warning btn-sm"class="nav-link mostrar-comenzar" data-modulo="comenzar" data-form="comenzar">CERRAR SESION</button>
-                 </li>
-                   
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link " href="#"><span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-    
+            <button type="button" id="btn-close-usuario" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
-    
-        </nav>
+        <div class="card-body">
+            
+            <div class="row p-2">
+                
+                <div class="col-10">
+                    <input type="text" v-model="usuario.nombre" placeholder="            Nombre" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4">
+                 
+                </div>
+                <div class="col-10">
+                    <input type="text" v-model="usuario.apellido" placeholder="           Apellido" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4">
+                
+                </div>
+                <div class="col-10">
+                    <input type="email" v-model="usuario.correo" placeholder="           Correo" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4">
+                
+                </div>
+                <div class="col-10">
+                    <select name=""class="form-control"id="selectGenero" v-model="usuario.genero">
+                        <option value="">--Seleccionar Genero--</option>
+                        <option value="masculino">masculino</option>
+                        <option value="femenino">femenino</option>
+                    
+              </select>
+            </div>
+           
+            <div class="row p-2">
+                <div class="col-12 text-center">
+                    <input id="btnGuardarUsuario" type="submit" class="btn btn-outline-warning text-white"
+                        value="Guardar">
+                    <input type="reset" class="btn btn-outline-warning text-white" value="Limpiar">
+                    <input type="button" class="btn btn-outline-warning mostrar-buscar-usuario text-white"
+                        data-modulo="usuario" data-form="buscar-usuario" value="Buscar">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-12 text-center">
+                    <div class="alert alert-success" role="alert">
+                        {{ usuario.msg }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 <script src="public/vistas/Usuario/usuario.js"></script>
-
-</body>
-</html>
