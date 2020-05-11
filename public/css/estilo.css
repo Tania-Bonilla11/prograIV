@@ -265,3 +265,6 @@ footer a {
     background-attachment: fixed;
     background-size: cover;
 }
+.img{
+	padding: 20px; margin: 10px; border: 2px solid rgb(252, 188, 15); float: right; width: 300px top: 5px; ;
+	}

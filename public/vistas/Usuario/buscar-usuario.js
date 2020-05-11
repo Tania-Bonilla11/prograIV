@@ -7,7 +7,7 @@ var appBuscarUsuario= new Vue({
     },
     methods: {
         buscarUsuario: function () {
-            fetch(`private/Modulos/Usuario/procesos.php?proceso=buscarUsuario&usuario=${this.valor}`).then(resp => resp.json()).then(resp => {
+            fetch(`../../../private/Modulos/Usuario/procesos.php?proceso=buscarUsuario&usuario=${this.valor}`).then(resp => resp.json()).then(resp => {
                 this.misusuario = resp;
             });
         },
@@ -16,7 +16,7 @@ var appBuscarUsuario= new Vue({
             appusuario.usuario.accion = 'modificar';
         },
         eliminarUsuario: function (idUsuario) {
-            fetch(`private/Modulos/Usuario/procesos.php?proceso=eliminarUsuario&usuario=${idUsuario}`).then(resp => resp.json()).then(resp => {
+            fetch(`../../../private/Modulos/Usuario/procesos.php?proceso=eliminarUsuario&usuario=${idUsuario}`).then(resp => resp.json()).then(resp => {
                 this.buscarUsuario();
             });
         
