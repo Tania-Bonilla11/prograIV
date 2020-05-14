@@ -21,43 +21,49 @@ class capacitador{
         $this->validar_datos();
     }
     private function validar_datos(){
-        if( empty($this->datos['nombre']) ){
+        if( empty(trim($this->datos['nombre'])) ){
             $this->respuesta['msg'] = 'por favor ingrese el nombre del capacitador';
         }
-        if( empty($this->datos['apellido']) ){
+        if( empty(trim($this->datos['apellido'])) ){
             $this->respuesta['msg'] = 'por favor ingrese el apellido del capacitador';
         }
-        if( empty($this->datos['correo']) ){
-            $this->respuesta['msg'] = 'por favor ingrese el correo ';
+        if( empty(trim($this->datos['direccion'])) ){
+            $this->respuesta['msg'] = 'por favor ingrese la direccion del capacitador';
         }
+        if( empty(trim($this->datos['correo'])) ){
+            $this->respuesta['msg'] = 'por favor ingrese el correo del capacitador';
+        }
+      
         $this->almacenar_capacitador();
     }
     private function almacenar_capacitador(){
         if( $this->respuesta['msg']==='correcto' ){
             if( $this->datos['accion']==='nuevo' ){
                 $this->db->consultas('
-                    INSERT INTO capacitador (nombre,apellido,direccion,correo,genero) VALUES(
-                     
+                    INSERT INTO capacitador (nombre,apellido,direccion,correo,genero,telefono) VALUES(
                         "'. $this->datos['nombre'] .'",
                         "'. $this->datos['apellido'] .'",
                         "'. $this->datos['direccion'] .'",
                         "'. $this->datos['correo'] .'",
-                        "'. $this->datos['genero'] .'"
+                        "'. $this->datos['genero'] .'",
+                        "'. $this->datos['telefono'] .'"
                     )
                 ');
-                $this->respuesta['msg'] = 'Registro insertado correctamente';
-            } else if( $this->datos['accion']==='modificar' ){
+                $this->respuesta['msg'] = 'Registro Capacitador insertado correctamente';
+            }else if($this->datos['accion']==='modificar'){
                 $this->db->consultas('
-                   UPDATE capacitador SET
-                      
-                        nombre      = "'. $this->datos['nombre'] .'",
-                        apellido    = "'. $this->datos['apellido'] .'",
-                        direccion   = "'. $this->datos['direccion'] .'",
-                        correo      = "'. $this->datos['correo'] .'",
-                        genero      = "'. $this->datos['genero'] .'"
-                    WHERE idCapacitador = "'. $this->datos['idCapacitador'] .'"
-                ');
-                $this->respuesta['msg'] = 'Registro actualizado correctamente';
+                UPDATE capacitador SET
+                     nombre       = "'. $this->datos['nombre'] .'",
+                     apellido     = "'. $this->datos['apellido'] .'",
+                     direccion    = "'. $this->datos['direccion'] .'",
+                     correo       = "'. $this->datos['correo'] .'",
+                     genero       = "'. $this->datos['genero'] .'",
+                     telefono       = "'. $this->datos['telefono'] .'"
+                 WHERE idCapacitador = "'. $this->datos['idCapacitador'] .'"
+             ');
+             $this->respuesta['msg'] = 'Registro actualizado correctamente';
+            
+
             }
         }
     }

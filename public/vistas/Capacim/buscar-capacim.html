@@ -1,0 +1,45 @@
+<form method="post" id="frm-buscar-capacim">
+    <div class="card border-danger mb-4" style="max-width: 26rem;">
+        <div class="card-header">
+            BUSCAR CAPACITACION IMPARTIDA
+
+            <button type="button" id="btn-close-buscar-capacim" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <table id="tbl-buscar-capacim" class="table-striped table-warning table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th colspan="3">
+                            <input type="text" v-model="valor" v-on:keyup="buscarCapacim"
+                                placeholder="capacitador, lugar o fecha" class="form-control">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>CAPACITADOR</th>
+                        <th>LUGAR</th>
+                        <th>CAPACITACION</th>
+                        <th>FECHA</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="mi_capacim in mis_capacim" :key="mi_capacim.idCapacim"
+                        v-on:click="modificarCapacim(mi_capacim)">
+                        <td>{{ mi_capacim.capacitador.label }}</td>
+                        <td>{{ mi_capacim.lugar.label }}</td>
+                        <td>{{ mi_capacim.capacitacion }}</td>
+                        <td>{{ mi_capacim.fecha }}</td>
+                        <td>{{ mi_capacim.valor }}</td>
+                        <td>
+                            <input v-on:click="eliminarCapacim(mi_capacim.idCapacim)" type="button"
+                                class="btn btn-outline-danger text-white" value="del">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<script src="public/vistas/Capacim/buscar-capacim.js"></script>

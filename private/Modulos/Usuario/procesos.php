@@ -22,14 +22,14 @@ class usuario{
         $this->validar_datos();
     }
     private function validar_datos(){
-        if( empty($this->datos['nombre']) ){
-            $this->respuesta['msg'] = 'por favor ingrese el nombre del Usuario';
+        if( empty(trim($this->datos['nombre'])) ){
+            $this->respuesta['msg'] = 'Por favor ingrese el nombre del Usuario';
         }
-        if( empty($this->datos['apellido']) ){
-            $this->respuesta['msg'] = 'por favor ingrese el apellido del Usuario';
+        if( empty(trim($this->datos['apellido'])) ){
+            $this->respuesta['msg'] = 'Por favor ingrese el apellido del Usuario';
         }
-        if( empty($this->datos['correo']) ){
-            $this->respuesta['msg'] = 'por favor ingrese el correo ';
+        if( empty(trim($this->datos['correo'])) ){
+            $this->respuesta['msg'] = 'Por favor ingrese el correo ';
         }
         $this->almacenar_usuario();
     }

@@ -1,0 +1,64 @@
+<form v-on:submit.prevent="guardarCapacim" v-on:reset="limpiarCapacim" id="frm-capacim">
+    <div class="card border-danger mb-4" style="max-width: 22rem;">
+        <div class="card-header" >
+            REGISTRO CAPACITACION IMPARTIDA
+
+            <button type="button" id="btn-close-capacim" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        CAPACITADOR:
+                    </div>
+                    <div class="col">
+                        <v-select v-model="capacim.capacitador" :options="capacitador" placeholder="Seleccione Capacitador" />
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        LUGAR:
+                    </div>
+                    <div class="col">
+                        <v-select v-model="capacim.lugar" :options="lugar" placeholder="Seleccione Lugar" />
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        CAPACITACION:
+                    </div>
+                    <div class="col">
+                        <v-select v-model="capacim.capacitacion" :options="capacitacion" placeholder="Seleccione Capacitacion" />
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        FECHA:
+                    </div>
+                    <div class="col">
+                        <input type="date" v-model="capacim.fecha" class="form-control form-control-sm">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col text-center">
+                    <div class="col">
+                        <input type="submit" class="btn btn-primary text-white" value="Guardar">
+                        <input type="reset" class="btn btn-warning text-white" value="Limpiar">
+                        <input type="button" class="btn btn-success mostrar-buscar-capacim text-white"
+                            data-modulo="capacim" data-form="buscar-capacim" value="Buscar">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+</form>
+<script src="public/vistas/Capacim/capacim.js"></script>

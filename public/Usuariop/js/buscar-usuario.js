@@ -16,10 +16,16 @@ var appBuscarUsuario= new Vue({
             appusuario.usuario.accion = 'modificar';
         },
         eliminarUsuario: function (idUsuario) {
+            alertify.confirm("Mantenimiento Usuarios","¿Estas seguro de eliminar el registro?",
+           ()=>{
             fetch(`../../../private/Modulos/Usuario/procesos.php?proceso=eliminarUsuario&usuario=${idUsuario}`).then(resp => resp.json()).then(resp => {
                 this.buscarUsuario();
             });
-        
+                alertify.success('Registro eliminado correctamente');
+            },
+            ()=>{
+                alertify.error('Accion de eliminar cancelada por el usuario');
+            });
         }
     },
     created: function () {

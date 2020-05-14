@@ -1,0 +1,39 @@
+<form method="POST" id="frm-buscar-capacitacion">
+    <div class="card text-white bg-secondary mb-3" style="max-width: 48rem;">
+        <div class="car-header">
+            BUSQUEDA CAPACITACION
+
+            <button type="button" id="btn-close-buscar-capacitacion" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <table id="tbl-buscar-capacitacion" class="card text-white bg-secondary mb-3 table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th colspan="5">
+                            <input type="text" v-model="valor"v-on:keyup="buscarCapacitacion" placeholder="nombre o tiempo estimado" class="form-control">
+                        </th>
+                    </tr>
+                    <tr>
+                      
+                        <th>NOMBRE</th>
+                        <t>TIEMPO</t>
+                        
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="capacitacion in miscapacitacion" :key="capacitacion.idCapacitacion" v-on:click="modificarCapacitacion(capacitacion)">
+                        <td>{{ capacitacion.nombre }}</td>
+                        <td>{{ capacitacion.tiempo }}</td>
+                        <td>
+                            <input v-on:click="eliminarCapacitacion(capacitacion.idCapacitacion)" type="button" class="btn btn-outline-danger text-white" value="del">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<script src="public/vistas/Capacitacion/buscar-capacitacion.js"></script>
