@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>miguiavialsv</title>
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="public/css/style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato'>
     <link rel="stylesheet" href="https://unpkg.com/vue-select@3.0.0/dist/vue-select.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/propeller.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/alertifyjs/css/alertify.min.css">
+   
 
 </head>
 <body class="bodys" >
     <!----Navegacion-->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand"href="#"><img src="road .png" alt=""></a>
-        <h2 class="text-warning">Mi Guia Vial El Salvador</h2> 
+        <a class="navbar-brand"href="#"><img src="img/road.png" alt=""></a>
+        <h2 style="color:#30475e">Mi Guia Vial El Salvador</h2> 
 
         <br>
 
@@ -44,7 +47,7 @@
                 </li>
                 
              <li>
-              <a href="public/Usuariop/comenzar.html"><input type="button" style="margin: 10px"  class="btn btn-warning btn-sm" value="COMENZAR"></a>
+              <button  onclick="location.href='../prograIV/public/Usuariop/comenzar.html'"type="button" class="btn btn-secondary" >Comenzar</button>
              </li>
                
                 </li>
@@ -88,57 +91,40 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-          <br>
-          <br>
-          <br>
+       
+         
           
-
-
-    <!--seccion 3 columnas-->
-    <div class="container">
-    <h1>SOBRE NOSOTROS...</h1>
-    <p>Somos una aplicación web comprometida con la seguridad vial de los salvadoreños ofreciendoles una platorma interactiva con juegos y videos para un aprendizaje vial efectivo,también prestamos servicio a la división de la PNC terrestre de educación vial,siendo para ellos una herramienta de registro de capacitaciones para charlas en instituciones   </p>
-    <p>Al Registrarte e Iniciar Sesion puedes encontrar:</p>
-    <hr>
-    <div class="row">
-      <div class="card-group">
-        <div class="card" style="width: 18rem;">
-        <img class="card-img-top img-fluid" src="img/Brain.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Juegos para ejercitar la memoria</h5>
-          <p class="card-text">Contamos con juegos para un aprendizaje divertido,para niños y adultos,la educación vial es para todas las edades</p>
-
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top img-fluid" src="img/graficos.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Graficas de accidentes en el Pais</h5>
-          <p class="card-text">Al iniciar sesion podras observar las graficas de accidentes de transito y sus resspectivas causas</p>
-
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top img-fluid" src="img/license.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Simulacion de Test para obtener licencia de Conducir</h5>
-          <p class="card-text">Con mi guia vial el salvador puedes realizar simulaciones de los test para obtener la licencia de conducir ya sea el test psicologico,test de señalizacion,vvmt entre otras dandote un resultado obtenido de la prueba de manera automatica,preparandote para el test real</p>
-
-        </div>
-      </div>
-    </div>
-      </div>
-      
-   
-    </div>
+          <section class="questions contenedor11">
+            <section class="textos-questions11">
+              
+              <h1 style="color:#30475e;">SOBRE NOSOTROS</h1>
+              <img class="foto"src="img/aboutus.png"
+                alt="" >
+                <br>  
+             
+              <p style="font-size: large;">Somos una aplicación web comprometida con la seguridad vial de los salvadoreños
+                 ofreciendoles una platorma interactiva con juegos y videos para un aprendizaje
+                 vial efectivo,también prestamos servicio a la división de la PNC terrestre de 
+                 educación vial,siendo para ellos una herramienta de registro de capacitaciones
+                  para charlas en instituciones.   </p>
+            </section>
+            </section>
+     <!--seccion 3 columnas-->
+     
+     <div class="questions contenedor11">
+     <h1 class="textos-questions11" style="color:#30475e;">Ofrecemos</h1>
+     <br>
+     <img style="width: 100%;" src="img/abouttt.png">
+                                   
+     </div>
+    
     <!--FAQ-->
-    <br>
-    <section>
+    <section class="section">
       <div class="container">
         <div>
-          <br>
-          <h2>FAQ </h2>  
-          <br>
+         
+          <h2 style="color: white;">FAQ </h2>  
+         
         </div>
         <div class="accordion">
           <div class="accordion-item" id="question1">
@@ -192,7 +178,7 @@
               size=32 >
               <br>
               <br>
-                                        <input type="button" id="enviarfaq"style="margin: 10px"  class="btn btn-warning btn-sm" value="ENVIAR">
+                                        <input type="button" id="enviarfaq"style="margin: 10px"  class="btn btn-secondary btn-sm" value="ENVIAR">
              
             </div>
 
@@ -232,14 +218,17 @@
       </div>
    </div>
     <!---scripts-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="public/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/propeller.min.js"></script>
-    <script type="module" src="public/js/app.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="public/alertifyjs/alertify.min.js"></script>
     <script src="https://unpkg.com/vue-select@3.0.0"></script>
-
+    <script type="module" src="public/js/app.js"></script>
    
 </body>
 </html>

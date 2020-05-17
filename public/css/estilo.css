@@ -45,8 +45,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #fcbf1e;
-	background-color: #FF4B2B;
+	border: 1px solid #1eececec;
+	background-color: #204051;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -159,9 +159,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #fcbf1e, #ff971d);
-	background: linear-gradient(to right, #fcbf1e, #ff971d);
+	background: #ececec;
+	background: -webkit-linear-gradient(to right, #dae1e7, #30475e);
+	background: linear-gradient(to right, #222831,#30475e);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -260,11 +260,11 @@ footer a {
 	left: 10px
    }
    .bg-secondary{
-    background-image: url(../../fondo.jpeg);
+    background-image: url(../../img/fondo.png);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
 .img{
-	padding: 20px; margin: 10px; border: 2px solid rgb(252, 188, 15); float: right; width: 300px top: 5px; ;
+	padding: 20px; margin: 10px; border: 2px solid rgb(252, 188, 15); float: right; width: 300px top : 5px; ;
 	}
