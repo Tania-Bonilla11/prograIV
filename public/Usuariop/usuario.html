@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <title>miguiavialsv</title>
+   
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-select@3.0.0/dist/vue-select.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #d1cebd;"">
+    <!----Navegacion-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand"href="#"><img src="../../img/road.png" alt=""></a>
+        <h2 style="color: #30475e;">Mi Guia Vial        El Salvador</h2> 
+        <br>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+
+
+              <li class="nav-item">
+               <img src="../../img/multimedia-option.png" alt="">
+                
+            </li> 
+              
+                <li class="nav-item">
+            
+                    <a class="nav-link mostrar-descargas" data-modulo="descargas" data-form="descargas" href="#">DESCARGAS</a>
+                </li> 
+                <li class="nav-item">
+                  <img src="../../img/kid-and-baby.png" alt="">
+                   
+               </li> 
+                <li class="nav-item">              
+                  <a class="nav-link mostrar-juegosniños" data-modulo="juegosniños" data-form="juegosniños" href="#">JUEGOS NIÑOS</a>
+            
+                </li>
+                
+             <li>
+                  <button  onclick="location.href='../../index.html'" style="margin: 10px" type="button" class="btn btn-secondary btn-sm">CERRAR SESION</button>
+             </li>
+               
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link " href="#"><span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    </nav>
+  
+   
+  <div style="background-color: #30475e;">
+    <br>
+   
+    <h4  style="color:white;">Accidentes de Transito</h4>
+    <br>
+   
+ </div>
+
+
+<canvas id="myChart" width="400" height="100e0"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+type: 'bar',
+data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+        label: '# accidentes',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+    }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+}
+});
+</script>
+<br>
+<!---Cards-->
+
+<div style="width: 700px; height: 400px; margin: 0 auto; float: none; margin-bottom: 10px;"  class="card text-center" >
+<div class="card-header">
+  <h2 style="color:#30475e;"> JUEGOS </h2>
+</div>
+<div class="card-body">
+    <img style="width: 400px;" src="../../img/aboutt.png">
+  <h5 class="card-title">Aprende Divirtiendote </h5>
+  <a href="#" class="btn btn-secondary">¡A Jugar!</a>
+</div>
+</div>
+<br>
+<!--2-->
+<div style="width: 700px; height: 4 00px; margin: 0 auto; float: none; margin-bottom: 10px;"  class="card text-center" >
+<div class="card-header">
+  <h2 style="color:#30475e;"> VIDEOS </h2>
+</div>
+<div class="card-body">
+    <img style="width: 300px;" src="../../img/multimediaa.png">
+  <h5 class="card-title">Videos educativos</h5>
+  <a href="#" class="btn btn-secondary">VER AHORA</a>
+</div>
+</div>
+<!--3-->
+<div style="width: 700px; height: 390px; margin: 0 auto; float: none; margin-bottom: 10px;"  class="card text-center" >
+<div class="card-header">
+  <h2 style="color:#30475e;"> SIMULACION: TEST DE CONDUCIR </h2>
+</div>
+<div class="card-body">
+    <img style="width: 200px;" src="../../img/test.png">
+  <h5 class="card-title">¿Estas listo para obtener la licencia de conducir?</h5>
+  <a href="#" class="btn btn-secondary">¡Ponte A prueba!</a>
+</div>
+</div>
+<div class="footer">
+<div class="footer-content">
+ <div class="footer-section about"><br>
+ <h2>Contactos</h2>
+ <br>
+ <h4>Numero VMT : 2661-3348 (San Miguel) </h4>
+ <h4>Sertracen   : 2233-5555  </h4>
+
+
+ </div>
+
+
+ 
+</div>
+<div class="footer-bottom">
+&copy;< CodeArt/> | Design by Tania Bonilla
+
+</div>
+ </div>
+</div>
+
+</body>
+</html>

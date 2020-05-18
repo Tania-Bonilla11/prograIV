@@ -4,14 +4,14 @@
 }
 /*footer*/
 .footer{
-  background: #27496d;
+  background: #343a40;
   color: cornsilk;
   height: 400px;
  position:relative;
 }
 .footer .footer-bottom{
-   background: #343a40;
-   color:#dae1e7;
+   background: #d1cebd;
+   color:#343a40;
    height: 50px;
    width: 100%;
    text-align: center;
@@ -21,18 +21,10 @@
    padding-top: 20px;
 
 }
-.footer .footer-content{
-  border:1px solid red;
-  height: 350px;
-  display: flex;
 
+.ll{
+	text-align: center;
 }
-.footer .footer-content .footer-section{
-  flex: 1;
-  padding: 25px;
-  border: 1px solid white;
-}
-
 
 *,
 *::before,
@@ -47,6 +39,11 @@
   max-width: 1000px; 
   margin: auto; 
   overflow: hidden; 
+}
+.centrado{
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
 }
 
 
