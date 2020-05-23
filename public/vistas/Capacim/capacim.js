@@ -28,7 +28,7 @@ var appcapacim = new Vue({
     },
     methods: {
         guardarCapacim() {
-            fetch(`../Eduvial/private/Modulos/Capacim/procesos.php?proceso=recibirDatos&capacim=${JSON.stringify(this.capacim)}`).then(resp => resp.json()).then(resp => {
+            fetch(`private/Modulos/Capacim/procesos.php?proceso=recibirDatos&capacim=${JSON.stringify(this.capacim)}`).then(resp => resp.json()).then(resp => {
                 if(resp.msg.indexOf("correctamente")>=0){
                     alertify.success(resp.msg);
                    } else {
@@ -47,7 +47,7 @@ var appcapacim = new Vue({
         }
     },
     created() {
-        fetch(`../Eduvial/private/Modulos/Capacim/procesos.php?proceso=traer_lugar_capacitador&capacim=''`).then(resp => resp.json()).then(resp => {
+        fetch(`private/Modulos/Capacim/procesos.php?proceso=traer_lugar_capacitador&capacim=''`).then(resp => resp.json()).then(resp => {
             this.capacitador = resp.capacitador;
             this.lugar = resp.lugar;
             this.capacitacion = resp.capacitacion;

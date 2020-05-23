@@ -14,7 +14,7 @@
         },
         methods:{
             guardarUsuario:function(){
-                fetch(`../../../private/Modulos/Usuario/procesos.php?proceso=recibirDatos&usuario=${JSON.stringify(this.usuario)}`).then(resp => resp.json()).then(resp=>{
+                fetch(`private/Modulos/Usuario/procesos.php?proceso=recibirDatos&usuario=${JSON.stringify(this.usuario)}`).then(resp => resp.json()).then(resp=>{
                    if(resp.msg.indexOf("correctamente")>=0){
                     alertify.success(resp.msg);
                    } else {

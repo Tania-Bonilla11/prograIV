@@ -149,6 +149,9 @@ padding: .5rem;
 display: none;
 
 }
+.modulos{
+  position: absolute;
+}
 
 .answer{
  max-height: 0;
