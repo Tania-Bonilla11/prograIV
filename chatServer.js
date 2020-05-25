@@ -9,7 +9,7 @@ io.on('connection',socket=>{
     socket.on('enviarMensaje',(msg)=>{
         MongoClient.connect(url, (err,client)=>{
             const db = client.db(dbName);
-            db.collection('chat').insert({'user':'Luis', 'msg':msg});
+            db.collection('chat').insert({'user':'Tois', 'msg':msg});
             io.emit('recibirMensaje',msg);
         });
     });
