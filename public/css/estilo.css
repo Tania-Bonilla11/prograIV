@@ -95,9 +95,12 @@ input {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 850px;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 500px;
+}
+.form{
+	padding: 30px 40px;
 }
 
 .form-container {
@@ -269,3 +272,54 @@ footer a {
 .img{
 	padding: 20px; margin: 10px; border: 2px solid #30475e; float: right; width: 300px top : 5px; ;
 	}
+
+
+
+	/**formcontrol**/
+	
+	
+	
+	
+
+
+
+.con input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.con.success input {
+	border-color: #2ecc71;
+}
+
+.con.error input {
+	border-color: #e74c3c;
+}
+
+.con i {
+	visibility: hidden;
+	top: 40px;
+	right: 10px;
+}
+
+.con.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.con.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.con small {
+	color: #e74c3c;
+
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.con.error small {
+	visibility: visible;
+}
