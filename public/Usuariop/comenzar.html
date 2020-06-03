@@ -18,7 +18,7 @@
     <div class="container" id="container">
       
         <div class="form-container sign-up-container">
-            <form action="#"id="form" class="form">
+            <form action="registrar.php"id="form" class="form" method="POST">
                 <div class="topcorner">
                     <button onclick="location.href='../../index.html'"type="button" id="btn-close-comenzar" class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -30,26 +30,26 @@
                 <br>    
 
                <div class="con">
-                <input type="text" placeholder="Nombre" id="username" />
+                <input type="text" placeholder="Nombre" id="username" name="nombre" />
                 <i class="fas fa-check-circle"></i>
 			    <i class="fas fa-exclamation-circle"></i>
 			    <small>Error message</small>
                 </div>
                 <div class="con">
-                <input type="email" placeholder="Correo" id="email"/>
+                <input type="email" placeholder="Correo" id="email"  name="email" />
                 <i class="fas fa-check-circle"></i>
 			    <i class="fas fa-exclamation-circle"></i>
 			    <small>Error message</small>
                 </div>
                 <div class="con">
-                <input type="password" placeholder="Contraseña"  id="password"/>
+                <input type="password" placeholder="Contraseña"  id="password"  name="pass" />
                 <i class="fas fa-check-circle"></i>
 			    <i class="fas fa-exclamation-circle"></i>
 			    <small>Error message</small>
                 </div>
 
                 <div class="con">
-                <input type="password" placeholder="Repetir Contraseña" id="password2" />
+                <input type="password" placeholder="Repetir Contraseña" id="password2"name="pass2" />
                 <i class="fas fa-check-circle"></i>
 			    <i class="fas fa-exclamation-circle"></i>
 			    <small>Error message</small>
@@ -58,7 +58,7 @@
                 <br>
                 <br>
                 
-                <button type="submit">Registrarse</button>
+                <button type="submit" onclick="checkInputs();">Registrarse</button>
             </form>
         </div>
         <div class="form-container sign-in-container">

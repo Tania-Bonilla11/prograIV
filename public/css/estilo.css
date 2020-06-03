@@ -3,7 +3,9 @@
 * {
 	box-sizing: border-box;
 }
-
+li{
+	color: white;
+}
 body {
 	background: #f6f5f7;
 	display: flex;
@@ -14,8 +16,13 @@ body {
 	height: 100vh;
 	margin: -20px 0 50px;
 }
+.white{
+	visibility: hidden;
+	color: white;
+}
 
 h1 {
+
 	font-weight: bold;
 	margin: 0;
 }
@@ -88,8 +95,36 @@ input {
 	width: 100%;
 }
 
+.header {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background: #30475e;
+    display: flex;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: white;
+}
+
+.menu li {
+    list-style: none;
+    padding: 30px;
+    padding-bottom: 27px;
+    font-weight: 300;
+}
+.menu li:hover {
+    border-bottom: 4px solid #fff;
+    cursor: pointer;
+}
+
 .container {
-	background-color: #fff;
+	background-image: url(../../img/fondo.png);
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
@@ -98,11 +133,28 @@ input {
 	width: 850px;
 	max-width: 100%;
 	min-height: 500px;
+	
 }
 .form{
 	padding: 30px 40px;
 }
-
+.container-form {
+    width: 150%;
+    max-width: 700px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+.container-form2 {
+    left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
 .form-container {
 	position: absolute;
 	top: 0;
@@ -120,12 +172,7 @@ input {
 	transform: translateX(100%);
 }
 
-.sign-up-container {
-	left: 0;
-	width: 50%;
-	opacity: 0;
-	z-index: 1;
-}
+
 
 .container.right-panel-active .sign-up-container {
 	transform: translateX(100%);
@@ -205,6 +252,7 @@ input {
 }
 
 .overlay-right {
+	background-color: #4592af;
 	right: 0;
 	transform: translateX(0);
 }
@@ -270,56 +318,6 @@ footer a {
 }
 
 .img{
-	padding: 20px; margin: 10px; border: 2px solid #30475e; float: right; width: 300px top : 5px; ;
+	padding: 20px; margin: 10px; border: 2px solid #30475e; float: right; width: 300px ;
 	}
 
-
-
-	/**formcontrol**/
-	
-	
-	
-	
-
-
-
-.con input:focus {
-	outline: 0;
-	border-color: #777;
-}
-
-.con.success input {
-	border-color: #2ecc71;
-}
-
-.con.error input {
-	border-color: #e74c3c;
-}
-
-.con i {
-	visibility: hidden;
-	top: 40px;
-	right: 10px;
-}
-
-.con.success i.fa-check-circle {
-	color: #2ecc71;
-	visibility: visible;
-}
-
-.con.error i.fa-exclamation-circle {
-	color: #e74c3c;
-	visibility: visible;
-}
-
-.con small {
-	color: #e74c3c;
-
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
-}
-
-.con.error small {
-	visibility: visible;
-}
