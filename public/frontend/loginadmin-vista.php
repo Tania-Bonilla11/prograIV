@@ -41,7 +41,7 @@
             <?php endif; ?>
         
             
-            <button type="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
+            <button  onclick="location.href='../Usuariop/usuariop.html'"type="submit" >Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
             
         </form>
         </div>

@@ -1,6 +1,6 @@
 <?php session_start();
 
-    if(isset($_SESSION['usuario'])) {
+    if(isset($_SESSION['admin'])) {
         header('location: index.php');
     }
 
@@ -8,15 +8,15 @@
     
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
-        $usuario = $_POST['usuario'];
+        $admin = $_POST['admin'];
         $clave = $_POST['clave'];
         $clave = hash('sha512', $clave);
         
-        if (empty($usuario)){
-            $error .= '<i>Favor de ingresar el usuario</i>';
+        if (empty($admin)){
+            $error .= '<i> ingrese nombre de Administrador</i>';
         } 
         else if (empty(trim ($_POST['clave']))){
-            $error .= '<i>Favor de ingresar la clave</i>';
+            $error .= '<i>Ingrese clave</i>';
         }else{
         try{
             $conexion = new PDO('mysql:host=localhost;dbname=db_eduvial', 'root', '');
@@ -25,21 +25,21 @@
             }
         
         $statement = $conexion->prepare('
-        SELECT * FROM login WHERE usuario = :usuario AND clave = :clave'
+        SELECT * FROM admin WHERE admin = :admin AND clave = :clave'
         );
         
         $statement->execute(array(
-            ':usuario' => $usuario,
+            ':admin' => $admin,
             ':clave' => $clave
         ));
             
         $resultado = $statement->fetch();
         
         if ($resultado !== false){
-            $_SESSION['usuario'] = $usuario;
+            $_SESSION['admin'] = $admin;
             header('location: principal/principal.php');
         }else{
-            $error .= '<i>Este usuario no existe</i>';
+            $error .= '<i>Este administrador no existe</i>';
         }
     }
 }

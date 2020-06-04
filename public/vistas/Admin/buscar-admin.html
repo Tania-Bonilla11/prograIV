@@ -1,0 +1,46 @@
+<form method="POST" id="frm-buscar-admin">
+    <div class="card text-white bg-danger mb-3" style="max-width: 48rem;">
+
+        <div class="car-header">
+            BUSQUEDA ADMINISTRADOR
+
+            <button type="button" id="btn-close-buscar-admin" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <table id="tbl-buscar-admin" class="table-striped ">
+                <thead>
+                    <tr>
+                        <th colspan="5">
+                            <input type="text" v-model="valor"v-on:keyup="buscarAdmin" placeholder="nombre o correo" class="form-control">
+                        </th>
+                    </tr>
+                    <tr>
+                      
+                        <th class="table-danger"></th>NOMBRE</th>
+                        <th class="table-danger"></th>APELLIDO</th>
+                        <th class="table-danger"></th>CORREO</th>
+                        <th class="table-danger"></th>CLAVE</th>
+                        <th class="table-danger"></th>GENERO</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="admin in misadmin" :key="admin.idAdmin" v-on:click="modificarAdmin(admin)">
+                    
+                        <td>{{ admin.nombre }}</td>
+                        <td>{{ admin.apellido}}</td>
+                        <td>{{ admin.correo }}</td>
+                        <td>{{ admin.clave }}</td>
+                        <td>{{ admin.genero }}</td>
+                        <td>
+                            <input v-on:click="eliminarAdmin(admin.idAdmin)" type="button" class="btn btn-outline-danger text-white" value="del">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<script src="public/vistas/Admin/buscar-admin.js"></script>
