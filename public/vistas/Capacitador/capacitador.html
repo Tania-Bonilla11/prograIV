@@ -1,8 +1,8 @@
 <form v-on:submit.prevent="guardarCapacitador" data-accion="nuevo" data-idcapacitador='' method="post" id="frm-capacitador">
-    <div class="card text-white bg-warning mb-3" style="max-width: 24rem;">
-        <div class="card-header">
-            <img src="../../../img/teacher.png"  >
-            Registro Capacitador
+    <div class="card border-danger mb-4" style="max-width: 24rem;">
+        <div class="card-header" style="background-color: #30475e;">
+            <label style="color:white">Registro Capacitador</label> 
+            
 
             <button type="button" id="btn-close-capacitador" class="close" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -45,6 +45,14 @@
             </div>
             <div class="row p-2">
                 <div class="col-4">
+                    Clave
+                </div>
+                <div class="col-8">
+                    <input v-model="capacitador.clave" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4">
                     Genero
                 </div>
                 <div class="col-8">
@@ -66,10 +74,10 @@
             </div>
             <div class="row p-2">
                 <div class="col-12 text-center">
-                    <input id="btnGuardarCapacitador" type="submit" class="btn btn-secondary text-white"
+                    <input id="btnGuardarCapacitador" type="submit" class="btn btn-primary text-white"
                         value="Guardar">
-                    <input type="reset" class="btn btn-secondary text-white" value="Limpiar">
-                    <input type="button" class="btn btn-secondary mostrar-buscar-capacitador text-white"
+                    <input type="reset" class="btn btn-warning text-white" value="Limpiar">
+                    <input type="button" class="btn btn-success mostrar-buscar-capacitador text-white"
                         data-modulo="capacitador" data-form="buscar-capacitador" value="Buscar">
                 </div>
             </div>

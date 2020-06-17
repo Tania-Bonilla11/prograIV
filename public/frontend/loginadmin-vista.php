@@ -23,28 +23,40 @@
         </div>
         
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="form">
-       
-        <h4> credenciales</h4>
+        
+    
           
                
             <div class="user line-input">
                 <label class="lnr lnr-user"></label>
-                <input type="text" placeholder="Nombre" autofocus name="admin">
+                <input type="text" placeholder="Nombre" autofocus name="usuario">
             </div>
             <div class="password line-input">
                 <label class="lnr lnr-lock"></label>
                 <input type="password" placeholder="Clave" name="clave">
             </div>
-             <div class="white" ><h1>Bienvenido Adminnn</h1><h4>ingresa tus credenciales</h4></div>
+            <div   class="privilegio line-input">
+          ingresar como:
+          <div class="col-8">
+               <select name="privilegio" require> 
+                 <option value="">--Seleccionar--</option>
+                 <option value="1">Admin</option>
+                 <option value="2">Capacitador</option>
+                   
+               </select>    <br>
+                  <br>
+            <button type="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
+            
+           </div>
+       </div><div class="white" ><h1>Bienvenido Adminnn</h1><h4>ingresa tus credenciales</h4></div>
+             
              <?php if(!empty($error)): ?>
             <div class="mensaje">
                 <?php echo $error; ?>
             </div>
             <?php endif; ?> 
         
-            
-            <button type="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
-            
+         
         </form>
         </div>
         <div class="overlay-panel overlay-right">

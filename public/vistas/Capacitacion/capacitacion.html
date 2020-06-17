@@ -1,7 +1,8 @@
 <form v-on:submit.prevent="guardarCapacitacion" data-accion="nuevo" data-idcapacitacion='' method="post" id="frm-capacitacion">
-    <div class="card text-white bg-secondary mb-3" style="max-width: 24rem;">
-        <div class="card-header">
-            Registro Capacitacion
+    <div class="card border-danger mb-4" style="max-width: 24rem;">
+        <div class="card-header"style="background-color: #30475e;">
+            <label style="color:white">Registro Capacitacion</label> 
+            
 
             <button type="button" id="btn-close-capacitacion" class="close" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -29,8 +30,8 @@
                 <div class="col-12 text-center">
                     <input id="btnGuardarCapacitacion" type="submit" class="btn btn-primary text-white"
                         value="Guardar">
-                    <input type="reset" class="btn btn-primary text-white" value="Limpiar">
-                    <input type="button" class="btn btn-primary mostrar-buscar-capacitacion text-white"
+                    <input type="reset" class="btn btn-warning text-white" value="Limpiar">
+                    <input type="button" class="btn btn-success mostrar-buscar-capacitacion text-white"
                         data-modulo="capacitacion" data-form="buscar-capacitacion" value="Buscar">
                 </div>
             </div>

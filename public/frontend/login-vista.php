@@ -26,8 +26,8 @@
         </div>
         
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="form">
-            <div class="welcome-form"><h1>Bienvenido </h1><h4>ingresa tus datos</h4></div>
-            <br>
+            <div class="welcome-form"><h1>Bienvenido </h1><h3>A tu guia vial sv</h3></div>
+          
                
             <div class="user line-input">
                 <label class="lnr lnr-user"></label>
@@ -37,23 +37,7 @@
                 <label class="lnr lnr-lock"></label>
                 <input type="password" placeholder="Contraseña" name="clave">
             </div>
-            <div class="privilegio line-input">
            
-                <label >¿No eres estudiante?</label><br>
-                <label >ingresar como:</label><br>
-              <div class="col-8">
-                    <select name="privilegio">
-                      <option value="">--Seleccionar--</option>
-                      <option value="1">Admin</option>
-                      <option value="2">Capacitador</option>
-                        
-                    </select> 
-                </div>
-                
-                
-           
-               
-            </div>
             
              <?php if(!empty($error)): ?>
             <div class="mensaje">

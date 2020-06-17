@@ -1,8 +1,9 @@
 <form v-on:submit.prevent="guardarLugar" data-accion="nuevo" data-idlugar='' method="post" id="frm-lugar">
-    <div class="card text-white bg-success mb-3" style="max-width: 24rem;">
-        <div class="card-header">
-            Registro Lugar
-
+    <div class="card border-danger mb-4" style="max-width: 24rem; ">
+        <div class="card-header"style="background-color: #30475e;">
+            <label style="color:white">Registro Lugar</label> 
+            
+           
             <button type="button" id="btn-close-lugar" class="close" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -35,10 +36,10 @@
            
             <div class="row p-2">
                 <div class="col-12 text-center">
-                    <input id="btnGuardarLugar" type="submit" class="btn btn-outline-warning text-white"
+                    <input id="btnGuardarLugar" type="submit" class="btn btn-primary text-white"
                         value="Guardar">
-                    <input type="reset" class="btn btn-outline-warning text-white" value="Limpiar">
-                    <input type="button" class="btn btn-outline-warning mostrar-buscar-lugar text-white"
+                    <input type="reset" class="btn btn-warning text-white" value="Limpiar">
+                    <input type="button" class="btn btn-success mostrar-buscar-lugar text-white"
                         data-modulo="lugar" data-form="buscar-lugar" value="Buscar">
                 </div>
             </div>

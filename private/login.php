@@ -11,7 +11,7 @@
         $usuario = $_POST['usuario'];
         $clave = $_POST['clave'];
         $clave = hash('sha512', $clave);
-        $privilegio=$_POST['privilegio'];
+       
         
         if (empty($usuario)){
             $error .= '<i>Favor de ingresar el usuario</i>';
@@ -26,26 +26,21 @@
             }
         
         $statement = $conexion->prepare('
-        SELECT * FROM login WHERE usuario = :usuario AND clave = :clave AND privilegio=:privilegio'
+        SELECT * FROM login WHERE usuario = :usuario AND clave = :clave '
         );
         
         $statement->execute(array(
             ':usuario' => $usuario,
             ':clave' => $clave,
-            ':privilegio' => $privilegio
+            
         ));
             
         $resultado = $statement->fetch();
         
         if ($resultado !== false){
             $_SESSION['usuario'] = $usuario;
-            $_SESSION['privilegio'] = $privilegio;
-            if(isset($_SESSION['usuario'])and $privilegio=='1'){
-                header('location: ../../PROGRAIV/public/Usuariop/usuariop.html');
-            }elseif($usuario == 'admin2'){
-                header('location: ../../PROGRAIV/public/Usuariop/usuariop.html');
-            }else{
-                header('location: principal/principal.php');
+            if(isset($_SESSION['usuario'])){
+               header('location: principal/principal.php');
             }
         }else{
             $error .= '<i>Este usuario no existe</i>';

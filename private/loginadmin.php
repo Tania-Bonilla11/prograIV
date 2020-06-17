@@ -1,6 +1,6 @@
 <?php session_start();
 
-    if(isset($_SESSION['admin'])) {
+    if(isset($_SESSION['usuario'])) {
         header('location: index.php');
     }
 
@@ -8,15 +8,16 @@
     
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
-        $admin = $_POST['admin'];
+        $usuario = $_POST['usuario'];
         $clave = $_POST['clave'];
         $clave = hash('sha512', $clave);
+        $privilegio=$_POST['privilegio'];
         
-        if (empty($admin)){
-            $error .= '<i>Favor de ingresar Nombre</i>';
+        if (empty($usuario)){
+            $error .= '<i> ingrese el usuario</i>';
         } 
         else if (empty(trim ($_POST['clave']))){
-            $error .= '<i>Favor de ingresar la clave</i>';
+            $error .= '<i>ingrese la clave</i>';
         }else{
         try{
             $conexion = new PDO('mysql:host=localhost;dbname=db_eduvial', 'root', '');
@@ -25,21 +26,29 @@
             }
         
         $statement = $conexion->prepare('
-        SELECT * FROM admin WHERE admin = :admin AND clave = :clave'
+        SELECT * FROM login WHERE usuario = :usuario AND clave = :clave AND privilegio=:privilegio'
         );
         
         $statement->execute(array(
-            ':admin' => $admin,
-            ':clave' => $clave
+            ':usuario' => $usuario,
+            ':clave' => $clave,
+            ':privilegio' => $privilegio
         ));
             
         $resultado = $statement->fetch();
         
         if ($resultado !== false){
-            $_SESSION['admin'] = $admin;
-            header('location: principal/principal.php');
+            $_SESSION['usuario'] = $usuario;
+            $_SESSION['privilegio'] = $privilegio;
+            if(isset($_SESSION['usuario'])and $privilegio=='1'){
+                header('location: ../../PROGRAIV/public/Usuariop/usuariop.html');
+            }elseif(isset($_SESSION['usuario'])and $privilegio=='2'){
+                header('location: ../../PROGRAIV/public/Usuariop/usuariop.html');
+            }else{
+                header('location: principal/principal.php');
+            }
         }else{
-            $error .= '<i>Este admin no existe</i>';
+            $error .= '<i>Este usuario con privilegios no existe</i>';
         }
     }
 }
