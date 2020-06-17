@@ -3,24 +3,7 @@
 
 }
 /*footer*/
-.footer{
-  background: #343a40;
-  color: cornsilk;
-  height: 400px;
- position:relative;
-}
-.footer .footer-bottom{
-   background: #d1cebd;
-   color:#343a40;
-   height: 50px;
-   width: 100%;
-   text-align: center;
-   position:absolute;
-   bottom:0px;
-   left:0px;
-   padding-top: 20px;
 
-}
 
 .ll{
 	text-align: center;
@@ -202,6 +185,3 @@ transform: translateY(-50%);
   display: block;
 }
 
-
-
- 

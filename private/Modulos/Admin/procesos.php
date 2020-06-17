@@ -43,8 +43,8 @@ class admin{
         if( $this->respuesta['msg']==='correcto' ){
             if( $this->datos['accion']==='nuevo' ){
                 $this->db->consultas('
-                    INSERT INTO admin (nombre,apellido,correo,clave,genero) VALUES(
-                        "'. $this->datos['nombre'] .'",
+                    INSERT INTO admin (admin,apellido,correo,clave,genero) VALUES(
+                        "'. $this->datos['admin'] .'",
                         "'. $this->datos['apellido'] .'",
                         "'. $this->datos['correo'] .'",
                         "'. $this->datos['clave'] .'",
@@ -56,7 +56,7 @@ class admin{
             }else if($this->datos['accion']==='modificar'){
                 $this->db->consultas('
                 UPDATE admin SET
-                     nombre       = "'. $this->datos['nombre'] .'",
+                     admin      = "'. $this->datos['admin'] .'",
                      apellido     = "'. $this->datos['apellido'] .'",
                      correo    = "'. $this->datos['correo'] .'",
                      clave       = "'. $this->datos['clave'] .'",
@@ -71,9 +71,9 @@ class admin{
     }
     public function buscarAdmin($valor=''){
         $this->db->consultas('
-            select admin.idAdmin, admin.nombre, admin.apellido, admin.correo, admin.clave,admin.genero
+            select admin.idAdmin, admin.admin, admin.apellido, admin.correo, admin.clave,admin.genero
             from admin
-            where admin.nombre like "%'.$valor.'%" or admin.apellido like "%'.$valor.'%" or admin.correo like "%'.$valor.'%"
+            where admin.admin like "%'.$valor.'%" or admin.apellido like "%'.$valor.'%" or admin.correo like "%'.$valor.'%"
         ');
         return $this->respuesta = $this->db->obtener_datos();
     }

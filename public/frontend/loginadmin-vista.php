@@ -29,7 +29,7 @@
                
             <div class="user line-input">
                 <label class="lnr lnr-user"></label>
-                <input type="text" placeholder="Nombre" autofocus name="usuario">
+                <input type="text" placeholder="Nombre" autofocus name="admin">
             </div>
             <div class="password line-input">
                 <label class="lnr lnr-lock"></label>
@@ -37,11 +37,13 @@
             </div>
              <div class="white" ><h1>Bienvenido Adminnn</h1><h4>ingresa tus credenciales</h4></div>
              <?php if(!empty($error)): ?>
-           
-            <?php endif; ?>
+            <div class="mensaje">
+                <?php echo $error; ?>
+            </div>
+            <?php endif; ?> 
         
             
-            <button  onclick="location.href='../Usuariop/usuariop.html'"type="submit" >Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
+            <button type="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
             
         </form>
         </div>

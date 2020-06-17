@@ -11,6 +11,7 @@
         $usuario = $_POST['usuario'];
         $clave = $_POST['clave'];
         $clave = hash('sha512', $clave);
+        $privilegio=$_POST['privilegio'];
         
         if (empty($usuario)){
             $error .= '<i>Favor de ingresar el usuario</i>';
@@ -25,25 +26,30 @@
             }
         
         $statement = $conexion->prepare('
-        SELECT * FROM login WHERE usuario = :usuario AND clave = :clave'
+        SELECT * FROM login WHERE usuario = :usuario AND clave = :clave AND privilegio=:privilegio'
         );
         
         $statement->execute(array(
             ':usuario' => $usuario,
-            ':clave' => $clave
+            ':clave' => $clave,
+            ':privilegio' => $privilegio
         ));
             
         $resultado = $statement->fetch();
         
         if ($resultado !== false){
             $_SESSION['usuario'] = $usuario;
-            header('location: principal/principal.php');
+            $_SESSION['privilegio'] = $privilegio;
+            if(isset($_SESSION['usuario'])and $privilegio=='1'){
+                header('location: ../../PROGRAIV/public/Usuariop/usuariop.html');
+            }elseif($usuario == 'admin2'){
+                header('location: ../../PROGRAIV/public/Usuariop/usuariop.html');
+            }else{
+                header('location: principal/principal.php');
+            }
         }else{
             $error .= '<i>Este usuario no existe</i>';
         }
     }
 }
 require '../public/frontend/login-vista.php';
-
-
-?>

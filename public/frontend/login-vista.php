@@ -37,6 +37,23 @@
                 <label class="lnr lnr-lock"></label>
                 <input type="password" placeholder="Contraseña" name="clave">
             </div>
+            <div class="privilegio line-input">
+           
+                <label >¿No eres estudiante?</label><br>
+                <label >ingresar como:</label><br>
+              <div class="col-8">
+                    <select name="privilegio">
+                      <option value="">--Seleccionar--</option>
+                      <option value="1">Admin</option>
+                      <option value="2">Capacitador</option>
+                        
+                    </select> 
+                </div>
+                
+                
+           
+               
+            </div>
             
              <?php if(!empty($error)): ?>
             <div class="mensaje">
@@ -48,7 +65,7 @@
             
             <button type="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
             <a href="../private/loginadmin.php">Iniciar Sesion como Admin</a>
-            <a href="">Olvide Contraseña</a>
+            <a href="../private/recuperar.php">Olvide Contraseña</a>
         </form>
     </div>
     <script src="../public/js/jquery.js"></script>

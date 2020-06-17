@@ -13,10 +13,10 @@
         $clave = hash('sha512', $clave);
         
         if (empty($admin)){
-            $error .= '<i> ingrese nombre de Administrador</i>';
+            $error .= '<i>Favor de ingresar Nombre</i>';
         } 
         else if (empty(trim ($_POST['clave']))){
-            $error .= '<i>Ingrese clave</i>';
+            $error .= '<i>Favor de ingresar la clave</i>';
         }else{
         try{
             $conexion = new PDO('mysql:host=localhost;dbname=db_eduvial', 'root', '');
@@ -39,7 +39,7 @@
             $_SESSION['admin'] = $admin;
             header('location: principal/principal.php');
         }else{
-            $error .= '<i>Este administrador no existe</i>';
+            $error .= '<i>Este admin no existe</i>';
         }
     }
 }

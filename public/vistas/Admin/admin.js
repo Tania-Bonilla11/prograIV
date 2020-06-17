@@ -5,7 +5,7 @@
         admin:{
             idAdmin    :0,
             accion       :'nuevo',
-            nombre       :'',
+            admin        :'',
             apellido     :'',
             correo       :'',
             clave      :'',
@@ -26,7 +26,7 @@
             },
             limpiarAdmin:function(){
                     this.admin.idAdmin = 0;
-                    this.admin.nombre = '';
+                    this.admin.admin = '';
                     this.admin.apellido = '';
                     this.admin.correo = '';
                     this.admin.clave = '';
