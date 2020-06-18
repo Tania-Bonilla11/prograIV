@@ -8,6 +8,7 @@ var appcapacitador = new Vue({
             apellido         :'',
             direccion        :'',
             correo           :'',
+            clave            :'',
             genero           :'',
             telefono         :'',
             msg              :''
@@ -29,6 +30,7 @@ var appcapacitador = new Vue({
                 this.capacitador.apellido = '';
                 this.capacitador.direccion = '';
                 this.capacitador.correo = '';
+                this.capacitador.clave = '';
                 this.capacitador.genero = '';
                 this.capacitador.telefono = '';
                 this.capacitador.accion = 'nuevo';

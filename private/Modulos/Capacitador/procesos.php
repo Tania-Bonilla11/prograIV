@@ -31,6 +31,9 @@ class capacitador{
             $this->respuesta['msg'] = 'por favor ingrese la direccion del capacitador';
         }
         if( empty(trim($this->datos['correo'])) ){
+            $this->respuesta['msg'] = ' favor ingrese el correo del capacitador';
+        }
+        if( empty(trim($this->datos['clave'])) ){
             $this->respuesta['msg'] = 'por favor ingrese el correo del capacitador';
         }
       
@@ -40,26 +43,29 @@ class capacitador{
         if( $this->respuesta['msg']==='correcto' ){
             if( $this->datos['accion']==='nuevo' ){
                 $this->db->consultas('
-                    INSERT INTO capacitador (nombre,apellido,direccion,correo,genero,telefono) VALUES(
+                    INSERT INTO login (nombre,apellido,direccion,correo,clave,privilegio,genero,telefono) VALUES(
                         "'. $this->datos['nombre'] .'",
                         "'. $this->datos['apellido'] .'",
                         "'. $this->datos['direccion'] .'",
                         "'. $this->datos['correo'] .'",
+                        "'. $this->datos['clave'] .'",
                         "'. $this->datos['genero'] .'",
+                        "2",
                         "'. $this->datos['telefono'] .'"
                     )
                 ');
                 $this->respuesta['msg'] = 'Registro Capacitador insertado correctamente';
             }else if($this->datos['accion']==='modificar'){
                 $this->db->consultas('
-                UPDATE capacitador SET
+                UPDATE login SET
                      nombre       = "'. $this->datos['nombre'] .'",
                      apellido     = "'. $this->datos['apellido'] .'",
                      direccion    = "'. $this->datos['direccion'] .'",
                      correo       = "'. $this->datos['correo'] .'",
+                     clave        = "'. $this->datos['clave'] .'",
                      genero       = "'. $this->datos['genero'] .'",
                      telefono       = "'. $this->datos['telefono'] .'"
-                 WHERE idCapacitador = "'. $this->datos['idCapacitador'] .'"
+                 WHERE id = "'. $this->datos['idCapacitador'] .'"
              ');
              $this->respuesta['msg'] = 'Registro actualizado correctamente';
             
@@ -69,9 +75,9 @@ class capacitador{
     }
     public function buscarCapacitador($valor=''){
         $this->db->consultas('
-            select capacitador.idCapacitador, capacitador.nombre, capacitador.apellido, capacitador.direccion, capacitador.correo,capacitador.genero
-            from capacitador
-            where capacitador.nombre like "%'.$valor.'%" or capacitador.apellido like "%'.$valor.'%" or capacitador.direccion like "%'.$valor.'%"
+            select login.id, login.nombre, login.apellido, login.direccion, login.correo,login.genero
+            from login
+            where login.privilegio=2 and capacitador.nombre like "%'.$valor.'%" or capacitador.apellido like "%'.$valor.'%" or capacitador.direccion like "%'.$valor.'%"
         ');
         return $this->respuesta = $this->db->obtener_datos();
     }
@@ -79,8 +85,8 @@ class capacitador{
     
             $this->db->consultas( '
                 delete capacitador
-                from capacitador
-                where capacitador.idCapacitador = "'.$idCapacitador.'"
+                from login
+                where login.id = "'.$idCapacitador.'"
             ');
            
                 $this->respuesta['msg'] = 'Registro eliminado correctamente';
