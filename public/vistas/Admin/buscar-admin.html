@@ -13,33 +13,29 @@
                 <thead>
                     <tr>
                         <th colspan="5">
-                            <input type="text" v-model="valor"v-on:keyup="buscarAdmin" placeholder="Buscar por nombre,usuario o direccion" class="form-control">
+                            <input type="text" v-model="valor"v-on:keyup="buscarAdmin" placeholder="nombre o correo" class="form-control">
                         </th>
                     </tr>
                     <tr>
                       
-                        <th class="table"></th>Nombre</th>
-                        <th class="table"></th>Apellido</th>
-                        <th class="table"></th>Usuario</th>
-                        <th class="table"></th>Correo</th>
-                        <th class="table"></th>Clave</th>
-                        <th class="table"></th>Direccion</th>
-                        <th class="table"></th>Telefono</th>
+                        <th class="table-danger"></th>NOMBRE</th>
+                        <th class="table-danger"></th>APELLIDO</th>
+                        <th class="table-danger"></th>CORREO</th>
+                        <th class="table-danger"></th>CLAVE</th>
+                        <th class="table-danger"></th>GENERO</th>
                         <th> </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="usuario in misadmin" :key="usuario.id" v-on:click="modificarAdmin(usuario)">
+                    <tr v-for="admin in misadmin" :key="admin.idAdmin" v-on:click="modificarAdmin(admin)">
                     
-                        <td>{{ usuario.nombre }}</td>
-                        <td>{{ usuario.apellido}}</td>
-                        <td>{{ usuario.usuario }}</td>
-                        <td>{{ usuario.correo }}</td>
-                        <td>{{ usuario.clave }}</td>
-                        <td>{{ usuario.direccion }}</td>
-                        <td>{{ usuario.telefono }}</td>
+                        <td>{{ admin.admin }}</td>
+                        <td>{{ admin.apellido}}</td>
+                        <td>{{ admin.correo }}</td>
+                        <td>{{ admin.clave }}</td>
+                        <td>{{ admin.genero }}</td>
                         <td>
-                            <input v-on:click="eliminarAdmin(usuario.id)" type="button" class="btn btn-outline-danger text-white" value="del">
+                            <input v-on:click="eliminarAdmin(admin.idAdmin)" type="button" class="btn btn-outline-danger text-white" value="del">
                         </td>
                     </tr>
                 </tbody>

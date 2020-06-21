@@ -1,4 +1,4 @@
-<form v-on:submit.prevent="guardarAdmin" data-accion="nuevo" data-id='' data-privilegio='' method="post" id="frm-Admin">
+<form v-on:submit.prevent="guardarAdmin" data-accion="nuevo" data-id=''  method="post" id="frm-Admin">
     <div class="card border-danger mb-4" style="max-width: 24rem;">
         <div class="card-header"style="background-color: #30475e;">
       
@@ -13,26 +13,30 @@
             
             <div class="d-inline-flex p-2">
                 
-               
-                 <input type="text" v-model="usuario.nombre" placeholder="Nombre" class="form-control" name="nombre">
+               <input type="text" v-model="admin.usuario" placeholder="Usuario" class="form-control">
                  &nbsp;
-            
+                 &nbsp;
                 
-                <input type="text" v-model="usuario.apellido" placeholder="Apellido" class="form-control">
+                <input type="text" v-model="admin.nombre" placeholder="Nombre" class="form-control">
+                
+                 &nbsp;
+                 &nbsp;
+                
+                 <input type="text" v-model="admin.apellido" placeholder="Apellido" class="form-control">
             </div>
            
             <div class="d-inline-flex p-2">
               
-                    <input type="text" v-model="usuario.usuario" placeholder="Usuario" class="form-control"> &nbsp;
-                    <input type="email" v-model="usuario.correo" placeholder="Correo" class="form-control"> &nbsp;
+                    <input type="email" v-model="admin.correo" placeholder="Correo" class="form-control"> &nbsp;&nbsp;
+                    <input type="password" v-model="admin.clave" placeholder="Clave" class="form-control">
                   
               
             </div>
             <div class="d-inline-flex p-2">
                
                    
-                    <input type="text" v-model="usuario.direccion" placeholder="Direccion" class="form-control">&nbsp;&nbsp;
-                        <input type="text" v-model="usuario.telefono" placeholder="Telefono" class="form-control">
+                    <input type="text" v-model="admin.direccion" placeholder="Direccion" class="form-control">&nbsp;&nbsp;
+                        <input type="text" v-model="admin.telefono" placeholder="Telefono" class="form-control">
                
                 
                 
@@ -43,19 +47,25 @@
                 
                 </div>
                 <div class="col-10">
-                    <input type="text" v-model="usuario.clave" placeholder="Clave" class="form-control">    <br>
-                    <select name=""class="form-control"id="selectGenero" v-model="usuario.genero">
+                   
+                 
+                    <select name=""class="form-control"id="selectGenero" v-model="admin.genero">
                         <option value="">--Seleccionar Genero--</option>
                         <option value="masculino">masculino</option>
                         <option value="femenino">femenino</option>
                     
-              </select>
-            </div>
+                    </select>
+                    <select style="visibility: hidden;"class="form-control"id="selectAdmin" v-model="admin.privilegio" name="privilegio">
+                        <option value="1">1</option>
+                        <option value="masculino">masculino</option>
+                        <option value="femenino">femenino</option>
+                    
+                    </select>
+            </div> 
             
            
             <div class="row p-2">
                 <div class="col-12 text-center">
-                    <br>
                     <input id="btnGuardarAdmin" type="submit" class="btn btn-primary"
                         value="Guardar">
                     <input type="reset" class="btn btn-warning text-white" value="Limpiar">

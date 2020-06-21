@@ -1,5 +1,5 @@
 <form method="POST" id="frm-buscar-capacitador">
-    <div class="card text-white " style="max-width: 48rem;">
+    <div class="card text-white " style="max-width: 98rem;">
         <div class="car-header" style="background-color: #30475e;">
             BUSQUEDA CAPACITADOR
 
@@ -34,7 +34,7 @@
                         <td>{{ capacitador.correo }}</td>
                         <td>{{ capacitador.genero }}</td>
                         <td>
-                            <input v-on:click="eliminarCapacitador(capacitador.idCapacitador)" type="button" class="btn btn-danger text-white" value="del">
+                            <input v-on:click="eliminarCapacitador(capacitador.idCapacitador)" type="button" class="btn btn-outline-danger text-white" value="del">
                         </td>
                     </tr>
                 </tbody>

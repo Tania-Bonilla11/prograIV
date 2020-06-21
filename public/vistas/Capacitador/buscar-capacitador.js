@@ -1,34 +1,38 @@
-var appBuscarCapacitador = new Vue({
-    el: '#frm-buscar-capacitador',
-    
-    data: {
-        miscapacitador: [],
-        valor: ''
-    },
-    methods: {
-        buscarCapacitador: function () {
-            fetch(`private/Modulos/Capacitador/procesos.php?proceso=buscarCapacitador&capacitador=${this.valor}`).then(resp => resp.json()).then(resp => {
-                this.miscapacitador = resp;
-            });
+var appcapacitador = new Vue({
+    el:'#frm-capacitador',
+    data:{
+        capacitador:{
+            idCapacitador    :0,
+            accion           :'nuevo',
+            nombre           :'',
+            apellido         :'',
+            direccion        :'',
+            correo           :'',
+            genero           :'',
+            telefono         :'',
+            msg              :''
+            }
         },
-        modificarCapacitador: function (capacitador) {
-            appcapacitador.capacitador = capacitador;
-            appcapacitador.capacitador.accion = 'modificar';
-        },
-        eliminarCapacitador: function (idCapacitador) {
-            alertify.confirm("Mantenimiento Capacitador","¿Estas seguro de eliminar el registro?",
-           ()=>{
-            fetch(`private/Modulos/Capacitador/procesos.php?proceso=eliminarCapacitador&capacitador=${idCapacitador}`).then(resp => resp.json()).then(resp => {
-                this.buscarCapacitador();
-            });
-                alertify.success('Registro eliminado correctamente');
+        methods:{
+            guardarCapacitador:function(){
+                fetch(`private/Modulos/Capacitador/procesos.php?proceso=recibirDatos&capacitador=${JSON.stringify(this.capacitador)}`).then(resp => resp.json()).then(resp=>{
+                    if(resp.msg.indexOf("correctamente")>=0){
+                        alertify.success(resp.msg);
+                       } else {
+                        alertify.warning(resp.msg);
+                       }
+                 });
             },
-            ()=>{
-                alertify.error('Accion de eliminar cancelada por el usuario');
-            });
+            limpiarCapacitador:function(){
+                this.capacitador.idCapacitador = 0;
+                this.capacitador.nombre = '';
+                this.capacitador.apellido = '';
+                this.capacitador.direccion = '';
+                this.capacitador.correo = '';
+                this.capacitador.genero = '';
+                this.capacitador.telefono = '';
+                this.capacitador.accion = 'nuevo';
+                appBuscarCapacitador.buscarCapacitador();
+            }
         }
-    },
-    created: function () {
-        this.buscarCapacitador();
-    }
 });
