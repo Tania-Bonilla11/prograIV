@@ -38,12 +38,15 @@
             <div   class="privilegio line-input">
           ingresar como:
           <div class="col-8">
-               <select name="privilegio" require> 
+          <div class="select">
+               <select name="privilegio" require id="slct"> 
                  <option value="">--Seleccionar--</option>
-                 <option value="1">Admin</option>
+                 <option value="1">Administrador</option>
                  <option value="2">Capacitador</option>
                    
-               </select>    <br>
+               </select>   </div>
+               
+                <br>
                   <br>
             <button type="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
             

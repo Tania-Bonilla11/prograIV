@@ -10,7 +10,7 @@
         
         $usuario = $_POST['usuario'];
         $clave = $_POST['clave'];
-        $clave = hash('sha512', $clave);
+       /* $clave = hash('sha512', $clave);*/
         $privilegio=$_POST['privilegio'];
         
         if (empty($usuario)){

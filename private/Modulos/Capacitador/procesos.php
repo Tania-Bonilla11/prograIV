@@ -40,14 +40,16 @@ class capacitador{
         if( $this->respuesta['msg']==='correcto' ){
             if( $this->datos['accion']==='nuevo' ){
                 $this->db->consultas('
-                    INSERT INTO login (nombre,apellido,direccion,correo,genero,telefono,privilegio) VALUES(
+                    INSERT INTO login (nombre,apellido,direccion,correo,genero,telefono,privilegio,usuario,clave) VALUES(
                         "'. $this->datos['nombre'] .'",
                         "'. $this->datos['apellido'] .'",
                         "'. $this->datos['direccion'] .'",
                         "'. $this->datos['correo'] .'",
                         "'. $this->datos['genero'] .'",
                         "'. $this->datos['telefono'] .'",
-                        "'. $this->datos['privilegio'] .'"
+                        "'. $this->datos['privilegio'] .'",
+                        "'. $this->datos['usuario'] .'",
+                        "'. $this->datos['clave'] .'"
                     )
                 ');
                 $this->respuesta['msg'] = 'Registro Capacitador insertado correctamente';

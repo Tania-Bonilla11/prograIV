@@ -37,6 +37,7 @@
                    
                     <input type="text" v-model="admin.direccion" placeholder="Direccion" class="form-control">&nbsp;&nbsp;
                         <input type="text" v-model="admin.telefono" placeholder="Telefono" class="form-control">
+                        <input style="visibility:hidden" type="text" v-model="admin.privilegio" value="1" class="form-control">
                
                 
                 
@@ -55,12 +56,7 @@
                         <option value="femenino">femenino</option>
                     
                     </select>
-                    <select style="visibility: hidden;"class="form-control"id="selectAdmin" v-model="admin.privilegio" name="privilegio">
-                        <option value="1">1</option>
-                        <option value="masculino">masculino</option>
-                        <option value="femenino">femenino</option>
                     
-                    </select>
             </div> 
             
            

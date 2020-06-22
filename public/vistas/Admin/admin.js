@@ -8,7 +8,7 @@
             correo     :'',
             usuario    :'',
             clave      :'',
-            privilegio :'',
+            privilegio :'1',
             nombre     :'',
             apellido   :'',
             direccion  :'',
