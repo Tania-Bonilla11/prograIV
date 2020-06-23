@@ -1,5 +1,11 @@
+/**
+ * @author CodeArt <usis055618@ugb.edu.sv>
+ * @file capacitacion.js -> Mantenimiento de capacitaciones impartidas
+ */
+
 var appcapacitacion = new Vue({
     el:'#frm-capacitacion',
+    //se hace un json para colocar los datos delv-model
     data:{
         capacitacion:{
             idCapacitacion   :0,
@@ -11,6 +17,7 @@ var appcapacitacion = new Vue({
         },
         methods:{
             guardarCapacitacion:function(){
+                //se llama las funciones de php para enviar los datos en forma de json 
                 fetch(`private/Modulos/Capacitacion/procesos.php?proceso=recibirDatos&capacitacion=${JSON.stringify(this.capacitacion)}`).then(resp => resp.json()).then(resp=>{
                     if(resp.msg.indexOf("correctamente")>=0){
                         alertify.success(resp.msg);

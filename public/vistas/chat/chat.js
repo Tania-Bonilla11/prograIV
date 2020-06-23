@@ -1,13 +1,20 @@
+/**
+ * @author CodeArt <usis055618@ugb.edu.sv>
+ * @file buscar-capacitador.js -> Mantenimiento de capacitaciones impartidas
+ */
+
+
+/**@connect -> conectarse al servidor 3001 */
 var socket = io.connect("http://localhost:3001",{'forceNew':true}),
     appchat = new Vue({
-        el:'#frm-chat',
+        el:'#frm-chat',/**llamar  */
         data:{
             msg : '',
             msgs : []
         },
         methods:{
             enviarMensaje(){
-                socket.emit('enviarMensaje', this.msg);
+                socket.emit('enviarMensaje', this.msg);/**mandar mensaje  */
                 this.msg = '';
             },
             limpiarChat(){
@@ -18,7 +25,7 @@ var socket = io.connect("http://localhost:3001",{'forceNew':true}),
             socket.emit('chatHistory');
         }
     });
-    socket.on('recibirMensaje',msg=>{
+    socket.on('recibirMensaje',msg=>{/**recibe el mensaje */
         console.log(msg);
         appchat.msgs.push(msg);
     });
@@ -40,7 +47,7 @@ var socket = io.connect("http://localhost:3001",{'forceNew':true}),
         });
         
     
-        $('.chat-close').on('click', function(e) {
+        $('.chat-close').on('click', function(e) {/**boton de cerrar */
     
             e.preventDefault();
             $('#live-chat').fadeOut(300);

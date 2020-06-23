@@ -1,11 +1,18 @@
+/**
+ * @author CodeArt <usis055618@ugb.edu.sv>
+ * @file buscar-capacitador.js -> Mantenimiento de buscar capacitador 
+ */
+
 var appBuscarCapacitador= new Vue({
     el: '#frm-buscar-capacitador',
     
     data: {
+        //array para tener los datos del capacitador
         miscapacitador: [],
         valor: ''
     },
     methods: {
+        //se llama la funcion en el php donde esta la consulta con la base y donde se encientran las funciones para actualizar o eliminar datos
         buscarCapacitador: function () {
             fetch(`private/Modulos/Capacitador/procesos.php?proceso=buscarCapacitador&capacitador=${this.valor}`).then(resp => resp.json()).then(resp => {
                 this.miscapacitador = resp;

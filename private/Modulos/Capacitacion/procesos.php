@@ -1,4 +1,8 @@
 <?php 
+/**
+ * @author CodeArt <usis055618@ugb.edu.sv>
+ * @file Modulos/Capacitacion/procesos.php-> Mantenimiento Capacitador 
+ */
 include('../../Config/Config.php');
 $capacitacion = new capacitacion($conexion);
 

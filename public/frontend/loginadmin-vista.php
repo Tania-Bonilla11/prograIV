@@ -51,13 +51,20 @@
             <button type="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
             
            </div>
-       </div><div class="white" ><h1>Bienvenido Adminnn</h1><h4>ingresa tus credenciales</h4></div>
-             
-             <?php if(!empty($error)): ?>
+       </div>
+       <br>
+
+     
+           <?php if(!empty($error)): ?>
             <div class="mensaje">
                 <?php echo $error; ?>
             </div>
-            <?php endif; ?> 
+            <?php endif; ?>
+    
+      
+       <div class="white" ><h1>Bienvenido Adminnn</h1><h4>ingresa tus credenciales</h4></div>
+             
+         
         
          
         </form>

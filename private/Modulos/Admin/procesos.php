@@ -1,4 +1,8 @@
 <?php 
+/**
+ * @author CodeArt <usis055618@ugb.edu.sv>
+ * @file Modulos/Admin/procesos.php-> Mantenimiento administrador
+ */
 include('../../Config/Config.php');
 $admin = new admin($conexion);
 
@@ -16,11 +20,13 @@ class admin{
     public function __construct($db){
         $this->db=$db;
     }
+    //recibir datos del array de admin.html
     public function recibirDatos($admin){
         $this->datos = json_decode($admin, true);
         $this->validar_datos();
     }
     private function validar_datos(){
+        //validacion de campos para que no esten vacios
         if( empty(trim($this->datos['nombre'])) ){
             $this->respuesta['msg'] = 'por favor ingrese el nombre del admin';
         }
@@ -49,6 +55,7 @@ class admin{
         $this->almacenar_admin();
     }
     private function almacenar_admin(){
+        //insertar datos en login la informacion obtenidos de las cajas de texto
         if( $this->respuesta['msg']==='correcto' ){
             if( $this->datos['accion']==='nuevo' ){
                 $this->db->consultas('
@@ -65,8 +72,10 @@ class admin{
                       
                     )
                 ');
+              //mensaje de resultado de la peticion 
                 $this->respuesta['msg'] = ' administrador registrado correctamente';
             }else if($this->datos['accion']==='modificar'){
+                //actualizar datos de login 
                 $this->db->consultas('
                 UPDATE login SET
                      correo         = "'. $this->datos['correo'] .'",
@@ -88,6 +97,7 @@ class admin{
         }
     }
     public function buscarAdmin($valor=''){
+        //consulta que llama datos de login que cimplan con especificacion de busqueda
         $this->db->consultas('
             select login.id, login.nombre, login.apellido, login.correo, login.clave,login.genero
             from login
@@ -100,7 +110,7 @@ class admin{
 
     }
     public function eliminarAdmin($idAdmin=''){
-    
+    //consulta que elimina admin del login 
             $this->db->consultas( '
                 delete admin
                 from login

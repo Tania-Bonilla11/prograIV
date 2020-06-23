@@ -179,6 +179,19 @@ input {
     cursor: pointer;
 }
 
+
+i{
+	color: #c81912;
+	font-size:large;
+	margin: 0 0 0.25em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+   font-family:Arial , Gadget, sans-serif;
+	
+}
+
 .container {
 	background-image: url(../../img/fondo.png);
 	border-radius: 10px;

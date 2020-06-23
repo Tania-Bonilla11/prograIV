@@ -24,17 +24,16 @@
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="form">
             <div class="welcome-form"><h1>Crear Cuenta </h1><h4>Ingresa tus datos</h4></div>
 
-            
-               
-            
-            <div class="user line-input">
-                <label class="lnr lnr-envelope"></label>
-                <input type="text"  placeholder="Correo" autofocus name="correo" value="<?php if(isset($correo)) echo $correo?>">
-            </div>
             <div class="user line-input">
                 <label class="lnr lnr-user"></label>
                 <input type="text" placeholder="Nombre Usuario" name="usuario" pattern="[a-zA-Z ]+" value="<?php if(isset($usuario)) echo $usuario?>">
             </div>
+            <div class="user line-input">
+                <label class="lnr lnr-envelope"></label>
+                <input type="text"  placeholder="Correo" autofocus name="correo" value="<?php if(isset($correo)) echo $correo?>">
+            </div>
+
+
             <div class="password line-input">
                 <label class="lnr lnr-lock"></label>
                 <input type="password" placeholder="Contraseña" name="clave">

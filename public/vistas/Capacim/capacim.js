@@ -1,7 +1,13 @@
+/**
+ * @author CodeArt <usis055618@ugb.edu.sv>
+ * @file capacim.js ->Enviar los datos para ejecutar funciones en php
+ */
+
 Vue.component('v-select', VueSelect.VueSelect);
 
 var appcapacim = new Vue({
     el: '#frm-capacim',
+    //se hace un json para colocar los datos delv-model
     data: {
         capacim: {
             idCapacim: 0,
@@ -28,6 +34,7 @@ var appcapacim = new Vue({
     },
     methods: {
         guardarCapacim() {
+            //se llama las funciones de php para enviar los datos en forma de json   
             fetch(`private/Modulos/Capacim/procesos.php?proceso=recibirDatos&capacim=${JSON.stringify(this.capacim)}`).then(resp => resp.json()).then(resp => {
                 if(resp.msg.indexOf("correctamente")>=0){
                     alertify.success(resp.msg);
@@ -37,6 +44,7 @@ var appcapacim = new Vue({
             });
         },
         limpiarCapacim() {
+            //para dejar los valores de los input en blanco 
             this.capacim.idCapacim = 0;
             this.capacim.accion = "nuevo";
             this.capacim.capacitador = '';

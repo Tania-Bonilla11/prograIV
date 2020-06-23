@@ -1,6 +1,12 @@
+/**
+ * @author CodeArt <usis055618@ugb.edu.sv>
+ * @file capacitador.js -> Obtener informacion del capacitador 
+ */
+
+
 var appcapacitador = new Vue({
     el:'#frm-capacitador',
-    data:{
+    data:{//json y colocacion del nivel de privilegio de usuario
         capacitador:{
             idCapacitador:0,
             accion     :'nuevo',
@@ -17,6 +23,7 @@ var appcapacitador = new Vue({
             }
         },
         methods:{
+            //lugar de funciones para  manipulacion de datos recibidas de procesos.php
             guardarCapacitador:function(){
                 fetch(`private/Modulos/Capacitador/procesos.php?proceso=recibirDatos&capacitador=${JSON.stringify(this.capacitador)}`).then(resp => resp.json()).then(resp=>{
                     if(resp.msg.indexOf("correctamente")>=0){
@@ -26,12 +33,12 @@ var appcapacitador = new Vue({
                        }
                  });
             },
+            //quitar los valores de los input para nuevo capacitador
             limpiarCapacitador:function(){
                     this.capacitador.idCapacitador = 0;
                     this.capacitador.correo = '';
                     this.capacitador.usuario = '';
                     this.capacitador.clave = '';
-                    this.capacitador.privilegio = '';
                     this.capacitador.nombre = '';
                     this.capacitador.apellido = '';
                     this.capacitador.direccion = '';

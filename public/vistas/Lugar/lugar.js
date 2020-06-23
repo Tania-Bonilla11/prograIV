@@ -1,4 +1,9 @@
 var applugar = new Vue({
+    /**
+ * @author CodeArt <usis055618@ugb.edu.sv>
+ * @file lugar.js -> Obtener datos de los input en array y llamar funciones desde el php
+ */
+
     el:'#frm-lugar',
     data:{
          lugar:{

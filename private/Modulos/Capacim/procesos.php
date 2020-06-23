@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author CodeArt <usis055618@ugb.edu.sv>
+ * @file Modulos/Capacim/procesos.php-> Mantenimiento Capacim
+ */
 include('../../config/config.php');
 $capacim = new capacim($conexion);
 
@@ -18,13 +22,14 @@ class capacim
     {
         $this->db = $db;
     }
+    //recibir datos del array de admin.html
     public function recibirDatos($capacim)
     {
         $this->datos = json_decode($capacim, true);
         $this->validar_datos();
     }
-    private function validar_datos()
-    {
+    private function validar_datos(){
+        //validacion de campos para que no esten vacios
         if (empty(trim($this->datos['capacitador']['id']))) {
             $this->respuesta['msg'] = 'por favor ingrese un capacitador';
         }
@@ -41,7 +46,7 @@ class capacim
         $this->almacenar_capacim();
     }
     private function almacenar_capacim()
-    {
+    { //insertar datos en login la informacion obtenidos de las cajas de texto
         if ($this->respuesta['msg'] === 'correcto') {
             if ($this->datos['accion'] === 'nuevo') {
                 $this->db->consultas('
@@ -50,12 +55,12 @@ class capacim
                         "' . $this->datos['lugar']['id'] . '",
                         "' . $this->datos['capacitacion']['id'] . '",
                         "' . $this->datos['fecha'] . '"
-                
-                     
                     )
                 ');
+                //mensaje de resultado de la peticion 
                 $this->respuesta['msg'] = 'Registro insertado correctamente';
             } else if ($this->datos['accion'] === 'modificar') {
+                //actualizar datos 
                 $this->db->consultas('
                     UPDATE capacim SET
                         idCapacitador    = "' . $this->datos['capacitador']['id'] . '",
