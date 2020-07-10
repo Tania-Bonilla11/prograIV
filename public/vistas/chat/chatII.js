@@ -1,6 +1,10 @@
+
+
+
+    
 /**
  * @author CodeArt <usis055618@ugb.edu.sv>
- * @file chatII.js -> Mantenimiento de capacitaciones impartidas
+ * @file chatII.js ->Diseño
  */
 
 /**@funtion -> funcionamiento para que el chat se pueda expandir  */
@@ -24,6 +28,3 @@
 	});
 	
 }) ();
-
-
-    

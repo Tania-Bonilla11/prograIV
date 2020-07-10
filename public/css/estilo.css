@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
+@media all and (max-width: 600px){
+    .cont{
+        width:100%;
+        height:auto;
+        margin-left:10px;
+    }
+}
+@media all and (max-width: 1200px) {
+	.cont {
+        display: inline-block;
+        padding:0px 6px;
+        margin:0px 4px;
+    }
+}
+@media all and (max-width: 840px) {
+    .cont{
+        margin:0px;
+        padding:0px;
+        padding-left:5%;
+        display:block;
+        float:none;
+        text-align:left;
+    }
+}
+@media all and (max-width: 520px) {
+	.cont{
+        padding-left:20%;
+    }
+}
 #cd-login, #cd-signup, #cd-reset-password {
 	display: none;
 }
@@ -193,8 +221,9 @@ i{
 }
 
 .container {
-	background-image: url(../../img/fondo.png);
-	border-radius: 10px;
+	
+	
+	/*border-radius: 10px;*/
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
@@ -208,6 +237,7 @@ i{
 	padding: 30px 40px;
 }
 .container-form {
+	
     width: 150%;
     max-width: 700px;
     background: #fff;
@@ -381,7 +411,8 @@ footer a {
 	left: 10px
    }
    .bg-secondary{
-    background-image: url(../../img/fondo.png);
+	background-image: url(../../img/fondo.png);
+	
     background-position: center;
     background-attachment: fixed;
     background-size: cover;

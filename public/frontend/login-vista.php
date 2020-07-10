@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login / Registro Eduvial</title>
+    <title>Bienvenidos </title>
     
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="../public/css/estilo.css">
     
 </head>
 <body  class="bg-secondary">
+    
+    
+    <div class="cont">
+    
 <div class="container-form">
-
         <div class="header" >
         <a href="../../../prograIV/index.html"><button onclick="location.href='../../index.html'"type="button" id="btn-close-comenzar" class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -37,7 +40,7 @@
                 <label class="lnr lnr-lock"></label>
                 <input type="password" placeholder="Contraseña" name="clave">
             </div>
-           
+             
             
              <?php if(!empty($error)): ?>
             <div class="mensaje">
@@ -49,8 +52,9 @@
             
             <button type="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
             <a href="../private/loginadmin.php">Iniciar Sesion como Admin</a>
-            <a href="../private/recuperar.php">Olvide Contraseña</a>
+            <a href="#"id="mostrar">Olvide Contraseña</a>
         </form>
+    </div>
     </div>
     <script src="../public/js/jquery.js"></script>
     <script src="../public/js/login.js"></script>

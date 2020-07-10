@@ -1,6 +1,6 @@
 /**
  * @author CodeArt <usis055618@ugb.edu.sv>
- * @file buscar-capacitador.js -> Mantenimiento de capacitaciones impartidas
+ * @file chat.js -> Envio de mensaje
  */
 
 

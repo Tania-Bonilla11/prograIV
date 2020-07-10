@@ -18,6 +18,30 @@ function init() {
         }).draggable();
     });
 }
+
 init();
 /**formulario ya mostrado */
+$(document).ready(function() {
+    $(".toggle").click(function() {
+       $('.links').slideToggle();
+    });
+    $(window).resize(function() {
+       if ($(window).width() > 768) {
+          $('.links').show();
+       } else {
+          $('.links').hide();
+       }
+    });
+});
+
+const modal=document.getElementById('modal');
+         const mostrar=document.getElementById('mostrar');
+         const close=document.getElementById('close');
+         mostrar.addEventListener('click',()=>{
+             modal.setAttribute('open','true')
+         })
+         close.addEventListener('click',()=>{
+             modal.removeAttribute('open');
+         })
+
 

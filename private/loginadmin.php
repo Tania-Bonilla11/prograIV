@@ -46,7 +46,7 @@
                 header('location: ../../PROGRAIV/public/Usuariop/usuariop.html');
                   //condicion que si cumple nivel de capacitador direccione a pagina principal capacitador
             }elseif(isset($_SESSION['usuario'])and $privilegio=='2'){
-                header('location: ../../PROGRAIV/public/Usuariop/usuariop.html');
+                header('location: ../../PROGRAIV/public/Usuariop/usuariocapa.html');
             }else{
                 header('location: principal/principal.php');
             }//al no encontrar usuario con esas condiciones avisar que dicho usuario no existe

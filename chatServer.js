@@ -1,3 +1,4 @@
+  
 //NOTA: Este archivo debe de ir en la carpeta de node -> C:\Program Files\nodejs
 var http = require('http').Server(),
     io   = require('socket.io')(http),

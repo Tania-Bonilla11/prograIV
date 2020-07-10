@@ -23,9 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               
-                <li class="nav-item">
-                    <a class="nav-link mostrar-admin" data-modulo="admin" data-form="admin" href="#">Registro Administrador</a>
-                </li> 
+               
                 <li class="nav-item">
                     <a class="nav-link mostrar-capacitador" data-modulo="capacitador" data-form="capacitador" href="#">Registro Capacitador</a>
                 </li>
@@ -39,7 +37,7 @@
                     <a class="nav-link mostrar-capacim" data-modulo="capacim" data-form="capacim" href="#">Registro Capacitaciones Impartidas</a>
                 </li>
                 <li class="nav-item ">
-                   <a href="public/Usuariop/usuariop.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a> 
+                   <a href="public/Usuariop/usuariocapa.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a> 
                 </li>
             </ul>
         </div>
@@ -61,61 +59,33 @@
 			
 
 		</header>
-        <form class="form-inline" v-on:submit.prevent="enviarMensaje" v-on:reset="limpiarChat" id="frm-chat">		
-		
-            <div onclick="Time()" id="live-chat" >
-                
-                <header class="clearfix" >
-                    
-                    
-                    <h4>Mi guia vial sv</h4>
-        
-                    
-        
-                </header>
-        
-                <div class="chat">
-                    
-                    <div class="chat-history">
-                        
-                        <div class="chat-message clearfix">
-                            
-                            <img src="img/road.png" alt="" width="32" height="32">
-        
-                            <div class="chat-message-content clearfix">
-                                
-        
-                                <section id="messenger">
-                                    <ul v-for="msg in msgs" id="messages">
-                                        <li>Mensaje: {{ msg }}</li>
-        
-        
-                                </ul>
-                                </section>
-        
-                            </div> <!-- end chat-message-content -->
-        
-                        </div> <!-- end chat-message -->
-        
-                        
-                    </div> <!-- end chat-history -->
-        
-        
-                    <form action="#" method="post">
-        
-                        <fieldset>
-                            
-                            <input type="text" v-model="msg" placeholder="Escribe tu Mensaje" class="form-control">
-        
-                            <input type="submit" value="Enviar" class="btn text-white" style="background-color: #30475e; ;" >
-        
-                        </fieldset>
-        
-                    </form>
-        
-                </div> <!-- end chat -->
-        
-            </div> <!-- end liv
+
+		<div class="chat">
+			
+			<div class="chat-history">
+				
+				<div class="chat-message clearfix">
+					
+					<img src="img/road.png" alt="" width="32" height="32">
+
+					<div class="chat-message-content clearfix">
+						
+
+                        <section id="messenger">
+                            <ul v-for="msg in msgs" id="messages">
+                                <li>Mensaje: {{ msg }}</li>
+
+
+                        </ul>
+                        </section>
+
+					</div> <!-- end chat-message-content -->
+
+				</div> <!-- end chat-message -->
+
+				
+			</div> <!-- end chat-history -->
+
 
 			<form action="#" method="post">
 
