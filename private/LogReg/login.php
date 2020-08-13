@@ -20,10 +20,10 @@
         }
         else {
             // Cambio en la conexion a la base de datos a Conexion/DB.php
-            include_once('Conexion/DB.php');
+            include_once('../../Database/Conexion/DB.php');
             
             $statement = $conexion->prepare('
-            SELECT id, privilegio FROM login WHERE usuario = :usuario AND clave = :clave '
+            SELECT id,usuario, clave,privilegio FROM login WHERE usuario = :usuario AND clave = :clave '
             );
             
             $statement->execute(array(
@@ -38,11 +38,11 @@
                 $_SESSION['privilegio'] = $resultado->privilegio;
 
                 if(isset($_SESSION['usuario'])){
-                    header('location: principal/principal.php');
+                    header('location: ../../private/LogReg/control/principal.php');
                 }
             }else{
                 $error .= '<i>Este usuario no existe</i>';
             }
         }
 }
-require '../public/frontend/login-vista.php';
+require '../../public/LogReg/login-vista.php';

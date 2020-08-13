@@ -5,7 +5,7 @@
     <title>Login / Registro Eduvial</title>
     
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="../public/css/estilo.css">
+    <link rel="stylesheet" href="../../../prograIV/public/css/estilo.css">
     
 </head>
 <body  class="bg-secondary">
@@ -16,12 +16,11 @@
                         <span aria-hidden="true">&times;</span>
                     </button></a>
             <div class="logo-title">
-                <img src="../../img/fondo.png" alt="">
                 
             </div>
             <div class="menu">
-                <a href="../private/login.php"><li class="module-login active" >Iniciar Sesion</li></a>
-                <a href="../private/register.php"><li class="module-register" >Registrarse</li></a>
+                <a href="../../private/LogReg/index.php"><li class="module-login active" >Iniciar Sesion</li></a>
+                <a href="../../private/LogReg/register.php"><li class="module-register" >Registrarse</li></a>
             </div>
         </div>
         
@@ -47,12 +46,11 @@
             <br>
             <br>
             
-            <button type="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
-            <a href="../private/loginadmin.php">Iniciar Sesion como Admin</a>
+            <button type="submit"name="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
             <a href="../private/recuperar.php">Olvide Contraseña</a>
         </form>
     </div>
-    <script src="../public/js/jquery.js"></script>
-    <script src="../public/js/login.js"></script>
+    <script src="../../public/js/jquery.js"></script>
+    <script src="../../public/js/login.js"></script>
 </body>
 </html>
