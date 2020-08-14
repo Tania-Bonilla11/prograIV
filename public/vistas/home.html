@@ -6,59 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <title>miguiavialsv</title>
-   
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/sweetalert2/3.0.3/sweetalert2.min.css'>
     <link rel="stylesheet" href="https://unpkg.com/vue-select@3.0.0/dist/vue-select.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
-    <body style="background-color: #d1cebd;"">
+    <body style="background-color:white">
         <!----Navegacion-->
-        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand"href="#"><img src="../../img/road.png" alt=""></a>
-            <h2 style="color: #30475e;">Mi Guia Vial        El Salvador</h2> 
-            <br>
-    
-    
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                  
+        <div class="navbar navbar-expand-lg fixed-top navbar-light">
+            <div class="container"><a class="navbar-brand"href="#"><img src="../../img/road.png" alt=""></a>
+               <div class="logo">
 
-                  <li class="nav-item">
-                   <img src="../../img/multimedia-option.png" alt="">
-                    
-                </li> 
-                  
-                    <li class="nav-item">
-                
-                        <a class="nav-link mostrar-descargas" data-modulo="descargas" data-form="descargas" href="#">DESCARGAS</a>
-                    </li> 
-                    <li class="nav-item">
-                      <img src="../../img/kid-and-baby.png" alt="">
-                       
-                   </li> 
-                    <li class="nav-item">              
-                      <a class="nav-link mostrar-juegosniños" data-modulo="juegosniños" data-form="juegosniños" href="#">JUEGOS NIÑOS</a>
-                
-                    </li>
-                    
-                 <li>
-                    <a class="active" href="../../private/LogReg/cerrar.php"><button  style="margin: 10px" type="submit" class="btn btn-secondary btn-sm">CERRAR SESION</button></a>
-                 </li>
+                  <h1>Mi Guia Vial <h6>El Salvador</h6></h1>
+               </div>
+               <div class="toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <br>
+             
+               <div class="links">
+                  <ul  >
                    
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link " href="#"><span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
+                     <li class="nav-item"> <img src="../../img/kid-and-baby.png" alt="">
+                        <a href="#">Juegos Niños</a>
+                     </li>
+                     <li class="nav-item">   <img src="../../img/multimedia-option.png" alt="">
+                        <a href="#">Descargas</a> <!--font-family: 'Montserrat', sans-serif;-->
+                     </li>
+                     <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="btn btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <img src="../../img/settings.png" alt="">
+                            </a>
+                          
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width: 75%; height: 150px;">
+                              <a style="width: 70%;" class="dropdown-item" href="#">Perfil</a>
+        
+                              <a  style="width: 70%;"class="dropdown-item" href="../../private/LogReg/cerrar.php"><img src="../../img/logout.png" alt=""> Cerrar Sesion</a>
+                             
+                              </div>
+                              </div>
+                             </div>
+                             </div>
+                         
+
+
+                     </li>
+
+                    
+
+                     
+                  </ul>
+               </div>
+               <div class="clearfix"></div>
             </div>
-    
-        </div>
-    
-        </nav>
-      
-       
+         </div>
       <div style="background-color: #30475e;">
         <br>
        
@@ -110,56 +119,85 @@ var myChart = new Chart(ctx, {
 </script>
 <br>
 <!---Cards-->
-
-<div style="width: 700px; height: 400px; margin: 0 auto; float: none; margin-bottom: 10px;"  class="card text-center" >
-    <div class="card-header">
-      <h2 style="color:#30475e;"> JUEGOS </h2>
+<div class="container">
+<div class="row">
+  <div class="column">
+    <div class="card" >
+      <h4 class="card-title">Juegos</h4>
+      <img src="../../img/politician.png" class="card-img-top" alt="..." style="height: 200px; width: 80%; align-self: center;">
+      <div class="card-body">
+        <p class="card-text">Divierte Aprendiendo</p>
+        <button onclick="location.href='../Usuariop/menujuegos.html'" style="color: white; background-color: #30475e; width: 190px;" class="btn btn-md" href="#">Jugar</button>
+      </div>
     </div>
-    <div class="card-body">
-        <img style="width: 400px;" src="../../img/aboutt.png">
-      <h5 class="card-title">Aprende Divirtiendote </h5>
-      <a href="../Usuariop/menujuegos.html" class="btn btn-secondary">¡A Jugar!</a>
-    </div>
-</div>
-<br>
-<!--2-->
-<div style="width: 700px; height: 4 00px; margin: 0 auto; float: none; margin-bottom: 10px;"  class="card text-center" >
-    <div class="card-header">
-      <h2 style="color:#30475e;"> VIDEOS </h2>
-    </div>
-    <div class="card-body">
-        <img style="width: 300px;" src="../../img/multimediaa.png">
-      <h5 class="card-title">Videos educativos</h5>
-      <a href="../Usuariop/videos/menu.html" class="btn btn-secondary">VER AHORA</a>
-    </div>
-</div>
-<!--3-->
-<div style="width: 700px; height: 390px; margin: 0 auto; float: none; margin-bottom: 10px;"  class="card text-center" >
-    <div class="card-header">
-      <h2 style="color:#30475e;"> SIMULACION: TEST DE CONDUCIR </h2>
-    </div>
-    <div class="card-body">
-        <img style="width: 200px;" src="../../img/test.png">
-      <h5 class="card-title">¿Estas listo para obtener la licencia de conducir?</h5>
-      <a href="#" class="btn btn-secondary">¡Ponte A prueba!</a>
-    </div>
-</div>
-<div class="footer">
-    <div class="footer-content">
-     <div class="footer-section about"><br>
-     
-
-     </div>
-    
-
-     
-    </div>
-    <div class="footer-bottom">
-    &copy;< CodeArt/> | Design by Tania Bonilla
-
-    </div>
-     </div>
   </div>
 
+
+  <div class="column">
+    <div class="card" >
+      <h4 class="card-title">Videos</h4>
+      <img src="../../img/multimedia.png" class="card-img-top" alt="..." style="height: 200px; width: 80%; align-self: center;">
+      <div class="card-body">
+        <p class="card-text">Aprende Conceptos</p>
+        <button onclick="location.href='../Usuariop/videos/menu.html'" style="color: white; background-color: #30475e; width: 190px;" class="btn btn-md" href="#">Ver</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" >
+      <h4 class="card-title">Simulacion de Test</h4>
+      <img src="../../img/test.png" class="card-img-top" alt="..." style="height: 200px; width: 80%; align-self: center;">
+      <div class="card-body">
+        <p class="card-text">Demuestra lo que sabes</p>
+        <button onclick="location.href='#'" style="color: white; background-color: #30475e; width: 190px;" class="btn btn-md" href="#">Ponte a Prueba</button>
+      </div>
+    </div>
+  </div>
+  
+ 
+ 
+</div>
+</div>
+</div>
+
+
+<footer class="site-footer">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+     <a href="#">Miguiavialsv</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-google"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+ 
+
+  </div> 
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="public/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="public/alertifyjs/alertify.min.js"></script>
+    <script src="https://unpkg.com/vue-select@3.0.0"></script>
+    <script type="module" src="../../public/js/app.js"></script>
+   
     </body>
+   
 </html>
