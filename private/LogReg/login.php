@@ -38,7 +38,7 @@
                 $_SESSION['privilegio'] = $resultado->privilegio;
 
                 if(isset($_SESSION['usuario'])){
-                    header('location: ../../private/LogReg/control/principal.php');
+                    header('location: ../../private/LogReg/control/principal.php ');
                 }
             }else{
                 $error .= '<i>Este usuario no existe</i>';
