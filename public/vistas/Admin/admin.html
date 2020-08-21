@@ -11,48 +11,54 @@
         </div>
         <div class="card-body" >
             
-            <div class="row p-2">
+            <div class="d-inline-flex p-2">
                 
-                <div class="col-10">
-                    <input type="text" v-model="admin.admin" placeholder="            Nombre" class="form-control">
-                </div>
+               <input type="text" v-model="admin.usuario" placeholder="Usuario" class="form-control">
+                 &nbsp;
+                 &nbsp;
+                
+                <input type="text" v-model="admin.nombre" placeholder="Nombre" class="form-control">
+                
+                 &nbsp;
+                 &nbsp;
+                
+                 <input type="text" v-model="admin.apellido" placeholder="Apellido" class="form-control">
+            </div>
+           
+            <div class="d-inline-flex p-2">
+              
+                    <input type="email" v-model="admin.correo" placeholder="Correo" class="form-control"> &nbsp;&nbsp;
+                    <input type="password" v-model="admin.clave" placeholder="Clave" class="form-control">
+                  
+              
+            </div>
+            <div class="d-inline-flex p-2">
+               
+                   
+                    <input type="text" v-model="admin.direccion" placeholder="Direccion" class="form-control">&nbsp;&nbsp;
+                        <input type="text" v-model="admin.telefono" placeholder="Telefono" class="form-control">
+                        <input style="visibility:hidden" type="text" v-model="admin.privilegio" value="1" class="form-control">
+               
+                
+                
+                
             </div>
             <div class="row p-2">
                 <div class="col-4">
+                
+                </div>
+                <div class="col-10">
+                   
                  
-                </div>
-                <div class="col-10">
-                    <input type="text" v-model="admin.apellido" placeholder="           Apellido" class="form-control">
-                </div>
-            </div>
-            <div class="row p-2">
-                <div class="col-4">
-                
-                </div>
-                <div class="col-10">
-                    <input type="email" v-model="admin.correo" placeholder="           Correo" class="form-control">
-                </div>
-            </div>
-            <div class="row p-2">
-                <div class="col-4">
-                
-                </div>
-                <div class="col-10">
-                    <input type="password" v-model="admin.clave" placeholder="            Clave" class="form-control">
-                </div>
-            </div>
-            <div class="row p-2">
-                <div class="col-4">
-                
-                </div>
-                <div class="col-10">
                     <select name=""class="form-control"id="selectGenero" v-model="admin.genero">
                         <option value="">--Seleccionar Genero--</option>
                         <option value="masculino">masculino</option>
                         <option value="femenino">femenino</option>
                     
-              </select>
-            </div>
+                    </select>
+                    
+            </div> 
+            
            
             <div class="row p-2">
                 <div class="col-12 text-center">
@@ -67,4 +73,4 @@
         </div>
     </div>
 </form>
-<script src="public/vistas/Admin/admin.js"></script>
+<script src="../vistas/Admin/admin.js"></script>

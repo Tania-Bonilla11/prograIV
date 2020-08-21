@@ -11,6 +11,7 @@
         $usuario = $_POST['usuario'];
         $clave = $_POST['clave'];
         $clave = hash('sha512', $clave);
+        
        
         if (empty($usuario)){
             $error .= '<i>Favor de ingresar el usuario</i>';
