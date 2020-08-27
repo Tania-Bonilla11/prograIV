@@ -5,6 +5,59 @@
   position: absolute;
 
 }
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+
+	outline: 0;
+	box-shadow: none;
+	border: 0 !important;
+	background: #2c3e50;
+	background-image: none;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+	display: none;
+  }
+  /* Custom Select */
+  select {
+	position: relative;
+	display: flex;
+	width: 13em;
+	height: 3em;
+	line-height: 3;
+	background: #2c3e50;
+	overflow: hidden;
+	border-radius: .25em;
+  }
+  select {
+	flex: 1;
+	padding: 0 .2em;
+	color: #fff;
+	cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 1em;
+	background: #34495e;
+	cursor: pointer;
+	pointer-events: none;
+	-webkit-transition: .25s all ease;
+	-o-transition: .25s all ease;
+	transition: .25s all ease;
+  }
+  /* Transition */
+  select:hover::after {
+	color: #4592af;
+  }
+  
+
 /*footer*/
 
 .containerjuegos{
@@ -162,6 +215,71 @@
   text-shadow: 2px 2px 10px #0000006c;
   font-weight: 400;
 }
+/* Reset Select */
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border: 0 !important;
+	background: #2c3e50;
+	background-image: none;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+	display: none;
+  }
+  /* Custom Select */
+  .select {
+	position: relative;
+	display: flex;
+	width: 13em;
+	height: 3em;
+	line-height: 3;
+	background: #2c3e50;
+	overflow: hidden;
+	border-radius: .25em;
+  }
+  select {
+	flex: 1;
+	padding: 0 .2em;
+	color: #fff;
+	cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 1em;
+	background: #34495e;
+	cursor: pointer;
+	pointer-events: none;
+	-webkit-transition: .25s all ease;
+	-o-transition: .25s all ease;
+	transition: .25s all ease;
+  }
+  /* Transition */
+  .select:hover::after {
+	color: #4592af;
+  }
+  .foto1 { padding: 10px; margin: 10px; border: 2px solid white; float: left; width: 250px; }
+
+#contpair {
+  border-radius: 4px;
+  max-width: 700px;
+  height:auto;
+  padding: 40px;
+  background: #AC394D;
+  margin: 100px auto;
+}
+#contpair h3{
+color: white;
+ font-family:cursive;
+}
 
 .card__side--front {
   background-color: #2196f3;
@@ -180,7 +298,7 @@
   text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.16), 2px 3px 1px rgba(0, 0, 0, 0.23);
   margin-bottom:40px;
   text-align: center;
-  background: #30475e;
+  background-color: #30475e;;
 }
 
 *,
@@ -528,7 +646,23 @@ a {
   border-radius: 3px;
   position: relative;
 }
+ summary,p {
 
+
+  rgba(214, 21, 86, 0.801);
+   color:  #30475e;
+   margin-right: auto;
+   margin-left: auto; 
+   
+   width: 50%;
+    font-size:large; 
+    font-family:cursive;
+}
+select  {
+   width: 50%;
+    font-size:large; 
+    font-family:cursive;
+}
 
 /*footer*/
 .site-footer
