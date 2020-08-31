@@ -59,14 +59,15 @@ function setRating(moves) {
 
 // End Game
 function endGame(moves, score) {
-	swal({
+	Swal.fire({
 		allowEscapeKey: false,
 		allowOutsideClick: false,
 		title: '¡Encontrastes las parejas!',
 		text: ' Con  ' + moves + ' Moviminetos '  + 'Prueba un nivel mas dificil o Juega de Nuevo',
 		type: 'success',
 		confirmButtonColor: '#9BCB3C',
-		confirmButtonText: 'Jugar'
+		confirmButtonText: 'Jugar',
+		footer: '<a href="#modal">Ver historial</a>'
 	}).then(function(isConfirm) {
 		if (isConfirm) {
 			initGame();
@@ -76,12 +77,11 @@ function endGame(moves, score) {
 
 // Restart Game
 $restart.on('click', function() {
-  swal({
+  Swal.fire({
     allowEscapeKey: false,
     allowOutsideClick: false,
     title: '¿Estas Seguro?',
     text: "¡pero, no pierdes vidas!, no seas aguafiestas",
-    type: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#9BCB3C',
     cancelButtonColor: '#EE0E51',
