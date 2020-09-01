@@ -1,9 +1,4 @@
 <?php session_start();
-
-    if(isset($_SESSION['usuario'])) {
-        header('location: index.php');
-    }
-
     $error = '';
     
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -11,7 +6,6 @@
         $usuario = $_POST['usuario'];
         $clave = $_POST['clave'];
         $clave = hash('sha512', $clave);
-        
        
         if (empty($usuario)){
             $error .= '<i>Favor de ingresar el usuario</i>';
@@ -24,7 +18,7 @@
             include_once('../../Database/Conexion/DB.php');
             
             $statement = $conexion->prepare('
-            SELECT id,usuario, clave,privilegio FROM login WHERE usuario = :usuario AND clave = :clave '
+            SELECT id, usuario, clave, privilegio FROM login WHERE usuario = :usuario AND clave = :clave '
             );
             
             $statement->execute(array(
@@ -36,6 +30,7 @@
             
             if ($resultado !== false){
                 $_SESSION['usuario'] = $usuario;
+                $_SESSION['user_id'] = $resultado->id;
                 $_SESSION['privilegio'] = $resultado->privilegio;
 
                 if(isset($_SESSION['usuario'])){

@@ -1,10 +1,12 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="es" >
 <head>
   <meta charset="UTF-8">
   <title>Principiantes</title>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Coda'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
   <!--<link rel='stylesheet' href='https://cdn.jsdelivr.net/sweetalert2/3.0.3/sweetalert2.min.css'>-->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'>
@@ -18,13 +20,19 @@
 
     <span class="moves">0</span> Movimientos
     <div class="restart">
-      <i class="fa fa-repeat">   Repetir</i>
+      <i class="fa fa-repeat"> Repetir</i>
     </div>
   </div>
 <ul class="deck"></ul>
+
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 <!--<script src='https://cdn.jsdelivr.net/sweetalert2/3.0.3/sweetalert2.min.js'></script>--><script  src="./script.js"></script>
+
+<script>
+  var level = 1;
+  var user_id = <?php echo $_SESSION["user_id"]; ?>;
+</script>
 
 </body>
 </html>

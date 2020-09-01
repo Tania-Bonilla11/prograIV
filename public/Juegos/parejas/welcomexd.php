@@ -16,8 +16,6 @@
         <div class="container"> <img src="../../../img/road.png" alt=""><h2 style="float: left;color:#30475e">Mi Guia Vial El Salvador</h2><a class="navbar-brand"href="#"></a>
            <div c
            lass="logo">
-
-             
            </div>
           
            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -26,7 +24,7 @@
            <div class="links">
               <ul  >
                 <li class="nav-item"> 
-                    <a href="#"data-toggle="modal" data-target="#exampleModal" >Historial de Juegos</a>
+                    <a href="#" data-toggle="modal" data-target="#exampleModal" >Historial de Juegos</a>
                    
 
                  </li><i class="fa fa-history fa-2x" aria-hidden="true"></i>
@@ -38,10 +36,6 @@
                  </li><i class="fa fa-gamepad fa-2x" aria-hidden="true"></i>
                  
                  </li>
-
-                
-
-                 
               </ul>
            </div>
          
@@ -54,8 +48,7 @@
      <h3 >E N C U E N T R A  </h3><h3 >P A R E J A S</h3>
       <details >
          <summary>  <img style="align:right"src="../../../img/arrr.png">¿Como Jugar? </summary>
-    
-  
+
          <p>Existe un numero par de tarjetas con imagenes de señales de transito,
          deberas dar clic sobre una y luego buscar la tarjeta con la misma señal de transito
          entre menos te tardes en encontrarlas demostraras tu capacidad de memorización. </p>
@@ -73,7 +66,7 @@
        <br>
    
       
-    <h3 ><img style="align:right"src="../../../img/level .png"> Selecciona un nivel para jugar</h3>
+    <h3 ><img style="align:right" src="../../../img/level.png"> Selecciona un nivel para jugar</h3>
                   <br>
                   <div class="select">
                      <select require id="slct" name="slct"> 

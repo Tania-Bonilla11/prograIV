@@ -59,6 +59,33 @@ function setRating(moves) {
 
 // End Game
 function endGame(moves, score) {
+	var resp = '';
+
+	$.ajax({
+		// la URL para la petición
+		url : '../../../private/Modulos/Juegos/guardarHistorial.php',
+		// la información a enviar
+		// (también es posible utilizar una cadena de datos)
+		data : {
+			id : user_id,
+			nivel : level,
+			mov : moves
+		},
+		// especifica si será una petición POST o GET
+		type : 'POST',
+		// código a ejecutar si la petición es satisfactoria;
+		// la respuesta es pasada como argumento a la función
+		success : function(data) {
+			resp = data;
+		},
+		// código a ejecutar si la petición falla;
+		// son pasados como argumentos a la función
+		// el objeto de la petición en crudo y código de estatus de la petición
+		error : function(xhr, status) {
+			alert('Disculpe, existió un problema');
+		}
+	});
+
 	Swal.fire({
 		allowEscapeKey: false,
 		allowOutsideClick: false,
@@ -67,11 +94,28 @@ function endGame(moves, score) {
 		type: 'success',
 		confirmButtonColor: '#9BCB3C',
 		confirmButtonText: 'Jugar',
-		footer: '<a href="#modal">Ver historial</a>'
-	}).then(function(isConfirm) {
-		if (isConfirm) {
+		showCancelButton: true,
+		cancelButtonText: 'Ver historial'
+	}).then(function(result) {
+		if (result.value) {
 			initGame();
 		}
+		else if (
+			/* Read more about handling dismissals below */
+			result.dismiss === Swal.DismissReason.cancel
+		  ) {
+			Swal.fire({
+				allowEscapeKey: false,
+			  	allowOutsideClick: false,
+			  	title: 'Record del Juego',
+				html: '<table class="table" style="margin-left: auto; margin-right: auto;"><thead class="thead-dark"><tr><th scope="col">#</th><th scope="col">Jugador</th><th scope="col">Nivel</th><th scope="col">Movimientos</th></tr></thead>' + 
+				'<tbody id="table_body">' + resp + '</tbody></table>'
+			}).then(function(result){
+				if (result.value){
+					initGame();
+				}
+			})
+		  }
 	})
 }
 
@@ -81,11 +125,11 @@ $restart.on('click', function() {
     allowEscapeKey: false,
     allowOutsideClick: false,
     title: '¿Estas Seguro?',
-    text: "¡pero, no pierdes vidas!, no seas aguafiestas",
+    text: "¡Pero, no pierdes vidas!, no seas aguafiestas",
     showCancelButton: true,
     confirmButtonColor: '#9BCB3C',
     cancelButtonColor: '#EE0E51',
-    confirmButtonText: ' reiniciar'
+    confirmButtonText: ' Reiniciar'
   }).then(function(isConfirm) {
     if (isConfirm) {
       initGame();

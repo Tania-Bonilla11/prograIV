@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-08-2020 a las 05:54:30
+-- Tiempo de generación: 01-09-2020 a las 05:37:14
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -122,6 +122,14 @@ CREATE TABLE `historial_juegos` (
   `movimientos` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
+--
+-- Volcado de datos para la tabla `historial_juegos`
+--
+
+INSERT INTO `historial_juegos` (`id_historial`, `id`, `nivel`, `movimientos`) VALUES
+(1, 35, 1, 4),
+(2, 36, 1, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -151,7 +159,8 @@ INSERT INTO `login` (`id`, `correo`, `usuario`, `clave`, `privilegio`, `nombre`,
 (32, 'tois@gmail.com', 'Tania', 'af9c8c68a0d643e028dfd99935220913ab9c553e533dc8cc46166a9696839fffb44b8a573b65ba7c6a6a690c1e23bcf4b15c8a568d06d42d77c58b7c54fe8607', 0, '', '', '', '', ''),
 (33, 'pepito@hotmail.com', 'Peps', 'mortadela1', 1, 'Jose', 'Bonilla', 'usulutan', '23456677', 'masculino'),
 (34, 'silvia123@gmail.com', 'Silvia', 'mortadela1', 2, 'Silvia', 'Penado', 'Lislique', '71690000', 'femenino'),
-(35, 'angelbranm@gmail.com', 'angel', 'd56aef3b5fa644d677096e5568aadd6b2d889b3791b79e1f66d80f54c3664aca7b9d7c973fd2ec812bd4fa197443826ef1c094483390228292c68d77a8fb7af3', 0, NULL, NULL, NULL, NULL, NULL);
+(35, 'angelbranm@gmail.com', 'angel', 'd56aef3b5fa644d677096e5568aadd6b2d889b3791b79e1f66d80f54c3664aca7b9d7c973fd2ec812bd4fa197443826ef1c094483390228292c68d77a8fb7af3', 0, NULL, NULL, NULL, NULL, NULL),
+(36, 'test1@correo.local', 'test', 'd56aef3b5fa644d677096e5568aadd6b2d889b3791b79e1f66d80f54c3664aca7b9d7c973fd2ec812bd4fa197443826ef1c094483390228292c68d77a8fb7af3', 0, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -298,13 +307,13 @@ ALTER TABLE `capacitador`
 -- AUTO_INCREMENT de la tabla `historial_juegos`
 --
 ALTER TABLE `historial_juegos`
-  MODIFY `id_historial` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_historial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de la tabla `loginadmin`
