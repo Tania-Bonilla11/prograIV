@@ -1,0 +1,53 @@
+
+
+[{
+        "question": "What is the most consumed manufactured drink in the world?",
+        "answer": ["Tea", "Beer", "Coca-cola", "Pepsi"],
+        "final": 0
+    },
+    {
+        "question": "Which country has the wine making region known as the Barossa Valley?",
+        "answer": ["France", "Australia", "Germany", "Italy"],
+        "final": 1
+    },
+    {
+        "question": "Where did Mulligatawny soup originate?",
+        "answer": ["Malaysia", "India", "Thailand", "China"],
+        "final": 1
+    },
+    {
+        "question": "Which country is the origin of the beef stew known as Daube?",
+        "answer": ["Austria", "Sweden", "France", "Germany"],
+        "final": 2
+    },
+    {
+        "question": "What fruit is traditionally used in an Eve's Pudding?",
+        "answer": ["Pineapples", "Oranges", "Strawberries", "Apples"],
+        "final": 3
+    },
+    {
+        "question": "If you were having a cocktail of Guinness and Champagne what would it be called?",
+        "answer": ["Red Velvet", "Blue Velvet", "Black Velvet", "Gold Velvet"],
+        "final": 2
+    },
+    {
+        "question": "In which country did Tea originate?",
+        "answer": ["Japan", "Thailand", "United Kingdom", "China"],
+        "final": 3
+    },
+    {
+        "question": "If you were in Australia and eating a 'sinker' what would you be having?",
+        "answer": ["Spaghetti", "Pie", "Fries", "Soup"],
+        "final": 1
+    },
+    {
+        "question": "Clam Chowder originated in which country?",
+        "answer": ["Australia", "United Kingdom", "USA", "Spain"],
+        "final": 2
+    },
+    {
+        "question": "A macaroon is typically made using which nut?",
+        "answer": ["Almonds", "Pistachios", "Peanuts", "Cashews"],
+        "final": 0
+    }
+]
