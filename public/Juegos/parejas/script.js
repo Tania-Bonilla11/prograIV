@@ -28,7 +28,7 @@ function shuffle(array) {
   return array;
 }
 
-// Initial Game
+// Iniciar Juego
 function initGame() {
 	var cards = shuffle(symbols);
   $deck.empty();
@@ -89,11 +89,13 @@ function endGame(moves, score) {
 	Swal.fire({
 		allowEscapeKey: false,
 		allowOutsideClick: false,
+		title:'Puntaje del Jugador',
+		icon: 'success',
 		title: '¡Encontrastes las parejas!',
 		text: ' Con  ' + moves + ' Moviminetos '  + 'Prueba un nivel mas dificil o Juega de Nuevo',
 		type: 'success',
 		confirmButtonColor: '#9BCB3C',
-		confirmButtonText: 'Jugar',
+		confirmButtonText: 'Seguir Jugando',
 		showCancelButton: true,
 		cancelButtonText: 'Ver historial'
 	}).then(function(result) {
@@ -108,7 +110,7 @@ function endGame(moves, score) {
 				allowEscapeKey: false,
 			  	allowOutsideClick: false,
 			  	title: 'Record del Juego',
-				html: '<table class="table" style="margin-left: auto; margin-right: auto;"><thead class="thead-dark"><tr><th scope="col">#</th><th scope="col">Jugador</th><th scope="col">Nivel</th><th scope="col">Movimientos</th></tr></thead>' + 
+				html: '<table id="record" class="table" style="margin-left: auto; margin-right: auto;"><thead class="thead-dark"><tr><th scope="col">#</th><th scope="col">Jugador</th><th scope="col">Nivel</th><th scope="col">Movimientos</th></tr></thead>' + 
 				'<tbody id="table_body">' + resp + '</tbody></table>'
 			}).then(function(result){
 				if (result.value){
@@ -121,20 +123,43 @@ function endGame(moves, score) {
 
 // Restart Game
 $restart.on('click', function() {
-  Swal.fire({
-    allowEscapeKey: false,
-    allowOutsideClick: false,
-    title: '¿Estas Seguro?',
-    text: "¡Pero, no pierdes vidas!, no seas aguafiestas",
-    showCancelButton: true,
-    confirmButtonColor: '#9BCB3C',
-    cancelButtonColor: '#EE0E51',
-    confirmButtonText: ' Reiniciar'
-  }).then(function(isConfirm) {
-    if (isConfirm) {
-      initGame();
-    }
-  })
+	const swalWithBootstrapButtons = Swal.mixin({
+		customClass: {
+			confirmButtonColor: '#9BCB3C',
+			cancelButtonColor: '#EE0E51',
+		},
+		buttonsStyling: true
+	  })
+	  
+	  swalWithBootstrapButtons.fire({
+		title: '¿Estas Seguro de Repetir la Partida?',
+		text: "Se perderan las parejas que haz encontrado",
+		icon: 'question',
+		showCancelButton: true,
+		confirmButtonText: 'Nueva Partida',
+		cancelButtonText: '¡Seguire Jugando!',
+		reverseButtons: true
+	  }).then((result) => {
+		if (result.value) {
+			initGame();
+		  swalWithBootstrapButtons.fire(
+			'Tu Partida se ha reiniciado',
+			'¡mucha suerte en esta partida!',
+			'success'
+		  ) 
+		} else if (
+		  /* Read more about handling dismissals below */
+		  result.dismiss === Swal.DismissReason.cancel
+		) {
+		  swalWithBootstrapButtons.fire(
+			'Cancelado',
+			'Sigue jugando :)',
+			'info'
+			
+		  )
+		 
+		}
+	  })
 });
 
 // Card flip

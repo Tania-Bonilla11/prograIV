@@ -266,14 +266,14 @@ select {
   .select:hover::after {
 	color: #4592af;
   }
-  .foto1 { padding: 10px; margin: 10px; border: 2px solid white; float: left; width: 250px; }
+  .foto1 { padding: 10px; margin: 10px; background:transparent;float: left; width: 250px; }
 
 #contpair {
   border-radius: 4px;
-  max-width: 700px;
+  max-width: 750px;
   height:auto;
   padding: 40px;
-  background: #AC394D;
+  background: #81b214;
   margin: 100px auto;
 }
 #contpair h3{
@@ -536,6 +536,9 @@ ul {
    margin: 0;
    padding: 0;
 }
+body{
+  background-image: url(../../img/fondo.png);
+}
 
 ul,
 ol {
@@ -650,7 +653,7 @@ a {
 
 
   rgba(214, 21, 86, 0.801);
-   color:  #30475e;
+ color:white;
    margin-right: auto;
    margin-left: auto; 
    

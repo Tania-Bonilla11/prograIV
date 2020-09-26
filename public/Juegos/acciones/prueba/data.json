@@ -1,0 +1,53 @@
+
+
+[{
+        "question": "Usted va conduciendo por la carretera y de repente los frenos del vehículo no responden. ¿Qué acción se debe tomar en este caso?",
+        "answer": ["a) Conducir el vehículo en zig-zag hasta que la velocidad disminuya", "b) Encender luces intermitentes y halar del freno de mano.", "c) Mantener la calma, no salir del carril, encender luces intermitentes, ir bajando la marcha, bombear freno y luego halar del freno de mano despacio.", "d) Encender luces intermitentes, salir de la carretera y girar en círculos hasta que el vehículo baje velocidad."],
+        "final": 2
+    },
+    {
+        "question": "¿Qué se debe hacer en caso de que no exista señalización de alto en una intercesión ya sea en cruz, en T?",
+        "answer": ["a) Seguir conduciendo.", "b) Detenerme, observar si viene otro vehículo por alguna intercepción, continuar marcha cuando tenga paso libre e informar a la Dirección General de transito que se necesita una señalización en tal lugar.", "c) No detenerse y pitar para avisar que va a pasar.", "d) Como no hay señalización debo continuar."],
+        "final": 1
+    },
+    {
+        "question": "Usted va conduciendo por la carretera y de repente se encuentra con personas que llevan ganado ¿Qué acción debe tomar?",
+        "answer": ["a) Seguir conduciendo y pitar hasta que el ganado se quite.", "b) Aumentar marcha y pasar por el carril contrario.", "c) Bajar la velocidad y pasarles despacio cuando exista oportunidad.", "d) Bajar velocidad y pitar hasta que el ganado se quite."],
+        "final": 2
+    },
+    {
+        "question": "Usted va conduciendo de noche ¿Qué acción debo tomar en caso de que un automovilista no quiera bajar la luz?",
+        "answer": ["a) Bajar y subir luz en señal de que baje la luz, disminuir velocidad y seguir con precaución.", "b) Subir la luz también.", "c) Apagar mi luz y esperar a que pase el automovilista.", "d) Poner luz alta, aumentar marcha y pasar mas rápido."],
+        "final": 0
+    },
+    {
+        "question": "¿Qué acción debo tomar en caso de que me estén llamando al teléfono cuando voy conduciendo?",
+        "answer": ["a) Contestar la llamada por si es emergencia.", "b) Bajar velocidad y contestar llamada.", "c) Contestar llamada y manejar con precaución.", "d) Bajar velocidad, buscar un lugar correcto donde parquearse y contestar llamada."],
+        "final": 3
+    },
+    {
+        "question": "Usted va conduciendo de noche ¿Qué acción debo tomar en caso de que un automovilista no quiera bajar la luz?",
+        "answer": ["a) Subir la luz también.", "b) Apagar mi luz y esperar a que pase el automovilista.", "c) Hacer señal de que baje la luz, disminuir velocidad y seguir con precaución.", "d) Poner luz alta, aumentar marcha y pasar mas rápido."],
+        "final": 2
+    },
+    {
+        "question": "¿Qué acción debo tomar en caso de que vea una ambulancia que viene con la sirena encendida detrás mío?",
+        "answer": ["a) Con precaución hacerme a un lado del carril y dejar que pase luego incorporarme al carril nuevamente.", "b) Acelerar mas el vehículo.", "c) Frenar bruscamente.", "d) Hacerme a un lado, dejar que pase y luego correr e ir detrás de ella para evitar el tráfico."],
+        "final": 0
+    },
+    {
+        "question": "¿Qué acción debo tomar en caso tener un accidente de tránsito con otro conductor?",
+        "answer": ["a) Enojarse con el otro automovilista y llamar a la policía.", "b) Acelerar el carro y huir del lugar de los hechos.", "c) Quedarse en el lugar de los hechos, cobrar daños del vehículo al otro conductor.", "d) Mantener la calma, ver si no hay heridos, anotar daños del vehículo, mantenerse en el lugar de los hechos y llamar a las autoridades."],
+        "final": 3
+    },
+    {
+        "question": "¿Qué se debe hacer en caso de que se pinche una llanta del vehículo mientras se va conduciendo?",
+        "answer": ["a) Encender luces intermitentes y Frenar al instante.", "b) Sujetar firme el volante y halar del freno de mano", "c) Sujetar firme el volante, bajar marcha, encender luces intermitentes e ir frenando despacio.", "d) Poner el vehículo en estado neutro y frenar."],
+        "final": 2
+    },
+    {
+        "question": "Usted va conduciendo, por accidente se equivoca de calle y se da cuenta que va entrando en sentido contrario. ¿Qué acción se debe hacer?",
+        "answer": ["c) Activar luces intermitentes, retroceder despacio y con cuidado, cuando le den espacio incorporarse al carril correcto.", "b) Seguir e ir por un lado de la calle hasta llegar al final.", "c) Poner retroceso y salir lo mas rápido que pueda.", "d) Encender luces intermitentes y seguir por un lado de la calle hasta el final."],
+        "final": 0
+    }
+]

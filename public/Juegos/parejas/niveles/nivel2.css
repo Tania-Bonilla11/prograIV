@@ -14,24 +14,22 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  background: #fa2044;
+  background: #eef13e;
   overflow: hidden;
   font-family: cursive;
-  color: white;
 }
 
 .deck {
-  width: 500px;
+  width: 345px;
   margin: 0 auto;
   background: #FFFA62;
-  padding: 26px;
+  padding: 16px;
   border-radius: 10px;
   box-shadow: 14px 14px 0 0 #000000;
 }
 .deck .card {
-  height: 50x;
-  width: 50px;
-  
+  height: 75px;
+  width: 75px;
   background: #FFCF7F;
   display: inline-block;
   margin: 0 15px 15px 0;
@@ -103,11 +101,11 @@ body {
 }
 
 *::-moz-selection {
-  background: black;
+  background: transparent;
 }
 
 *::selection {
-  background: black;
+  background: transparent;
 }
 
 .swal2-overlay {

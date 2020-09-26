@@ -47,7 +47,7 @@
             <br>
             
             <button type="submit"name="submit">Iniciar sesion<label class="lnr lnr-chevron-right"></label></button>
-            <a href="../private/recuperar.php">Olvide Contraseña</a>
+           
         </form>
     </div>
     <script src="../../public/js/jquery.js"></script>
